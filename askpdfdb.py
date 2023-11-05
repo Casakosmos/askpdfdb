@@ -1,4 +1,3 @@
-import sqlite3
 import json
 import textract
 import os
@@ -8,14 +7,37 @@ from langchain.llms import OpenAI
 from langchain.chains import ConversationalRetrievalChain
 import codecs
 import re
+import psycopg2
+from psycopg2.extensions import register_adapter, AsIs
+import cohere
+import numpy as np
+
+cohere_key = "{YOUR_COHERE_API_KEY}"
+openai_key = "{YOUR_OPENAI_API_KEY}"
+
+co = cohere.Client(cohere_key)
+openai.api_key = openai_key
+
+
+
 
 os.environ["OPENAI_API_KEY"] = "<OPENAI_API_KEY>"
 
 
-def get_embeddings():
-    return openai.model('text-embedding-ada-002')
+
+
 
 class PDFEmbedder:
+
+    def get_cohere_embedding(text):
+        # This function should return a list representing the embedding of the input text using the Cohere API.
+        embedding = co.embed([text], input_type="search_document", model="embed-multilingual-v3.0").embeddings
+        return np.asarray(embedding)
+
+    def get_embeddings():
+        return openai.model('text-embedding-ada-002')
+
+
     def create_embedding(self, content):
         embeddings = get_embeddings()
         return embeddings.embed_query(content)
@@ -32,6 +54,8 @@ class PDFEmbedder:
         return tokenizer_model.token_count(text)
 
 class PDFProcessor:
+
+
     def __init__(self, folder_name):
         self.folder_name = folder_name
         self.text_splitter = RecursiveCharacterTextSplitter(
@@ -66,31 +90,55 @@ class PDFProcessor:
 
 def connect_to_database():
 
-    # Connect to SQLite database and load sqlite-vss extension
-    conn = sqlite3.connect('my_database.db')
-    conn.enable_load_extension(True)
-    conn.load_extension('./vss0')
 
-    # Create vss0 table
-    conn.execute('CREATE VIRTUAL TABLE vss_articles USING vss0(headline_embedding(384))')
+    # Connect to PostgreSQL database
+    conn = psycopg2.connect(database="my_database", user="username", password="password", host="localhost", port="5432")
+
+    # Create a cursor object
+    cursor = conn.cursor()
+
+    # Add this line after establishing the connection
+    cursor.execute('CREATE EXTENSION IF NOT EXISTS pgvector')
+
+    # Create vss_articles table
+    cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
 
     # Array to hold all chunks
     all_chunks = []
 
+    return conn, cursor
 
-    return conn
+conn, cursor = connect_to_database()
+create_match_documents_function(cursor)
 
 
-def interact_with_user():
+def create_match_documents_function(cursor):
+    function_definition = """
+    CREATE OR REPLACE FUNCTION match_documents(query_embedding vector(1536), match_threshold float, match_count int)
+    RETURNS TABLE (id serial, headline_embedding vector(1536), similarity float)
+    LANGUAGE sql STABLE
+    AS $$
+    SELECT vss_articles.id, vss_articles.headline_embedding, 1 - (vss_articles.headline_embedding <=> query_embedding) AS similarity 
+    FROM vss_articles 
+    WHERE 1 - (vss_articles.headline_embedding <=> query_embedding) > match_threshold 
+    ORDER BY similarity DESC 
+    LIMIT match_count;
+    $$;
+    """
+    cursor.execute(function_definition)
 
-# Create embeddings using ai.py's embedding function
-embeddings = [embedding(chunk) for chunk in all_chunks]
+###
 
-chat_history = []
-qa = ConversationalRetrievalChain.from_llm(OpenAI(temperature=0.1), embeddings)
+class UserInteraction:
+    def __init__(self, cohere_client, openai_client, database):
+        self.cohere_client = cohere_client
+        self.openai_client = openai_client
+        self.database = database
+        self.chat_history = []
 
-while True:
-    # Get user query
+    def get_user_query(self):
+        query = input("Enter a query (type 'exit' to quit): ")
+        return query
 
 
 
@@ -106,18 +154,50 @@ while True:
         
         return sanitized_query
 
-    query = input("Enter a query (type 'exit' to quit): ")
-    if query.lower() == "exit":
-        break
 
+    def interact(self):
+        """
+        This method handles the interaction with the user. It runs in a loop until the user types 'exit'.
+        
+        In each iteration of the loop, it performs the following steps:
+        
+        1. Gets a raw query from the user using the `get_user_query` method.
+        2. If the user types 'exit', it breaks the loop and ends the interaction.
+        3. Otherwise, it sanitizes the query using the `sanitize_query` method. This involves removing special characters, converting to lowercase, and removing extra spaces.
+        4. It then generates and stores embeddings for the sanitized query using the `generate_and_store_embeddings` method. This involves generating embeddings for the query using both Cohere and OpenAI, combining the embeddings, and storing them in the database.
+        5. It generates a response to the query using the `generate_response` method. This involves retrieving the stored embeddings from the database, generating a response based on the embeddings, and storing the response in the database.
+        6. It adds the sanitized query and the response to the chat history.
+        7. Finally, it prints the response.
+        """
+        while True:
+            raw_query = self.get_user_query()
+            if raw_query.lower() == "exit":
+                break
+            sanitized_query = self.sanitize_query(raw_query)
+            self.generate_and_store_embeddings(sanitized_query)
+            response = self.generate_response(sanitized_query)
+            self.chat_history.append((sanitized_query, response))
+            print(response)
+
+
+    def generate_and_store_embeddings(self, query):
+        # Generate embeddings for the query using both Cohere and OpenAI
+        # Combine the embeddings
+        # Store the combined embeddings in the database
+        pass
+
+    def generate_response(self, query):
+        # This method should generate a response to the user's query.
+        # The actual implementation will depend on the specific method you're using to generate responses.
+        pass
     # Use ai.py's embedding function to generate a response
     result = embedding({"question": query, "chat_history": chat_history})
 
-    def build_prompt(query, similar_sections):
+ 
+   def build_prompt(query, similar_sections):
         # Combine the query and the similar sections
         prompt = f"Question: {query}\n\nContext sections:\n{similar_sections}"
         return prompt
-
 
     def text_completion(prompt):
         # Send the prompt to the OpenAI API to generate a text completion
@@ -144,9 +224,15 @@ while True:
     # Convert the result into a query vector
     query_vector = result['embeddings']
 
+
+    # Insert the query vector into the database
+    cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (query_vector.tolist(),))
+    conn.commit()
+
+
     # Search the database of vectors using the query vector
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM vss_articles WHERE vss_search(headline_embedding, ?) LIMIT 10;", (json.dumps(query_vector.tolist()),))
+    cursor.execute("SELECT * FROM vss_articles ORDER BY headline_embedding <-> ? LIMIT 10;", (query_vector.tolist(),))
 
     
     def generate_response(similar_vectors):
@@ -155,30 +241,30 @@ while True:
     # Generate a response based on the most similar vectors
     response = generate_response(cursor.fetchall())
 
+
+
+    # Insert the response vector into the database
+    cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (response.tolist(),))
+    conn.commit()
+
     # Existing code...
     chat_history.append((query, response))
     print(response)
 
 
 # Main Execution Code
+
 def main():
-
-
-    def process_pdf_folder(pdf_folder, text_folder):
-        # TODO: Implement logic to process PDF files in the given folder and return all text chunks
-        pass
-  connect_to_database()
+    conn, cursor = connect_to_database()
+    create_match_documents_function(cursor)
     all_chunks = process_pdf_folder("./pdf", "./text")
     embedder = PDFEmbedder()
     for i, chunk in enumerate(all_chunks):
-    embedding = embedder.create_embedding(chunk)
-    conn.execute('INSERT INTO vss_articles(rowid, headline_embedding) VALUES (?, ?)', (i, json.dumps(embedding.tolist())))
-    
-    interact_with_user()
-# Commit changes and close connection
+        embedding = embedder.create_embedding(chunk)
+        conn.execute('INSERT INTO vss_articles(headline_embedding) VALUES (?)', (embedding.tolist(),))
+        interact_with_user()
     conn.commit()
     conn.close()
-
     
 
 if __name__ == "__main__":
