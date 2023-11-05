@@ -175,17 +175,24 @@ class QueryProcessor:
         self.sanitized_query = re.sub(r'\s+', ' ', self.sanitized_query).strip()
 
     def generate_and_store_embeddings(self):
-        cohere_embedding = self.embedder.get_cohere_embedding(self.sanitized_query)
+        # Generate the OpenAI embedding
         openai_embedding = self.embedder.get_openai_embedding(self.sanitized_query)
-        
-
+        # Perform vector similarity query on the 'questions' table using the OpenAI embedding
+        similar_questions = self.database.perform_vector_similarity_query('questions', openai_embedding)
+        # Retrieve the corresponding answers for the similar questions
+        similar_answers = [self.database.retrieve_answer(question) for question in similar_questions]
+        # Tokenize the answers and extract key concepts
+        tokenized_answers = [self.embedder.get_token_count(answer) for answer in similar_answers]
+        # Synthesize the tokenized answers into a context of up to 8000 tokens
+        context = self.synthesize_context(tokenized_answers)
+        # Generate the Cohere embedding for the context
+        cohere_embedding = self.embedder.get_cohere_embedding(context)
         # Perform vector similarity query on the 'texts' table using the Cohere embedding
         similar_texts = self.database.perform_vector_similarity_query('texts', cohere_embedding)
-        
         # Delete the Cohere embedding from memory
         del self.temp_embeddings[self.sanitized_query]
-        
         return similar_texts
+
 
 class UserInteraction:
     def __init__(self, query_processor):
@@ -207,17 +214,10 @@ class UserInteraction:
             self.chat_history.append((self.query_processor.sanitized_query, response))
             print(response)
 
-    def generate_response(self):
-        # Retrieve the OpenAI embedding from the 'questions' table
-        openai_embedding = self.query_processor.database.retrieve_embedding('questions', self.query_processor.sanitized_query)
-        
-        # Perform a vector similarity query in the 'questions' and 'answers' tables using the OpenAI embedding
-        similar_questions = self.query_processor.database.perform_vector_similarity_query('questions', openai_embedding)
-        similar_answers = self.query_processor.database.perform_vector_similarity_query('answers', openai_embedding)
         
         
-        # Store the OpenAI embedding in the 'questions' table
-        self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
+        
+
         
 
         # Generate a response based on the most similar texts
@@ -243,8 +243,61 @@ class UserInteraction:
         response = self.process_event_stream(event_stream)
 
         
-        # Store the response and its embedding in the 'answers' table
-        self.query_processor.database.store_response('answers', response, response_embedding)
+
+
+         # Store the OpenAI embedding in the 'questions' table
+        self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
+
+    def generate_context_and_prompt(self, query, similar_questions, similar_answers, key_concepts):
+        # Start with the user's query
+        context = f"The user has asked the following question: {query}\n\n"
+
+        # Add similar questions and answers
+        context += "Here are some similar questions that have been asked before, along with their answers:\n"
+        for question, answer in zip(similar_questions, similar_answers):
+            context += f"Question: {question}\nAnswer: {answer}\n\n"
+
+        # Add key concepts
+        context += "Based on these questions and answers, the following key concepts have been identified:\n"
+        for concept in key_concepts:
+            context += f"{concept}\n"
+
+        # Add a conclusion that summarizes the key points
+        context += "\nIn response to the user's query, consider the following points:\n"
+
+        # Ensure the context does not exceed the maximum token limit
+        if self.embedder.get_token_count(context) > 12000:
+            context = self.summarize_context(context, 12000)
+
+        # Generate a prompt from the context
+        prompt = self.summarize_context(context, 1000)
+
+        # Use Cohere to find semantic associations in the text database based on the context
+        cohere_embedding = self.embedder.get_cohere_embedding(context)
+        similar_texts = self.database.perform_vector_similarity_query('texts', cohere_embedding)
+
+        # Select the most relevant texts up to the token limit
+        selected_texts = self.select_most_relevant_texts(similar_texts, 1200)
+
+        # Append the selected texts to the final prompt for GPT-4
+        final_prompt = prompt + "\n\nSimilar texts:\n" + "\n".join(selected_texts)
+
+        return context, prompt, final_prompt
+
+
+        # Use Cohere to find semantic associations in the text database based on the context
+        cohere_embedding = self.embedder.get_cohere_embedding(context)
+        similar_texts = self.database.perform_vector_similarity_query('texts', cohere_embedding)
+
+        def summarize_context(self, context, max_tokens):
+            # Use the gpt-3.5-turbo-16k model to summarize the context
+            response = openai.Completion.create(
+                engine="gpt-3.5-turbo-16k",
+                prompt=context,
+                max_tokens=max_tokens,
+                temperature=0.5,
+            )
+        return response.choices[0].text.strip()
         
         
 
@@ -252,27 +305,28 @@ class UserInteraction:
 
 
 
-
+class FinalAnalysis
 
  
-    def build_prompt(self, query, similar_sections):
-        # Combine the query and the similar sections
-        prompt = f"You are a scholar that posesses knowledge of philosophy at a phd level and excel at explaining while at the same time being concise, clear and demonstrating a masterful use of logic and philosophical terminology: {query}\n\nContext sections:\n{similar_texts}"
-        return prompt
+    def prompt_gpt(self)= "You are a scholar that posesses knowledge of philosophy at a phd level and excel at explaining while at the same time being concise, clear and demonstrating a masterful use of logic and philosophical terminology"
+    
 
 
 
 
     def text_completion(self, prompt):
         # Send the prompt to the OpenAI API to generate a text completion
-        response = openai.Completion.create(
+        final_response = openai.Completion.create(
             engine="gpt-4",
-            prompt=prompt,
-            max_tokens=1000,
+            prompt=final_prompt, prompt_gpt, similar_texts
+            max_tokens=max_tokens,
             temperature=0,
             stream=True,
         )
-        return response
+        return final_response
+
+        # Store the response and its embedding in the 'answers' table
+        self.query_processor.database.store_response('answers', final_response, response_embedding)
 
     def process_event_stream(self, event_stream):
         final_response = ""
@@ -287,33 +341,9 @@ class UserInteraction:
 
 
     # Convert the result into a query vector
-    query_vector = result['embeddings']
+    query_vector = final_response['embeddings']
 
 
-    # Insert the query vector into the database
-    cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (query_vector.tolist(),))
-    conn.commit()
-
-
-    # Search the database of vectors using the query vector
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM vss_articles ORDER BY headline_embedding <-> ? LIMIT 10;", (query_vector.tolist(),))
-
-    
-    def generate_response(self, query):
-        # Retrieve the stored OpenAI embedding from the database
-        openai_embedding = self.database.retrieve_embedding('questions', query)
-        # Retrieve the Cohere embedding from memory
-        cohere_embedding = self.temp_embeddings[query]
-        # Perform a vector similarity query in the database using the Cohere embedding
-        similar_texts = self.database.perform_vector_similarity_query('texts', cohere_embedding)
-        # Generate a response based on the most similar texts
-        response = self.generate_response_based_on_similar_texts(similar_texts)
-        # Embed the response using the OpenAI API
-        response_embedding = self.openai_client.embed(response)
-        # Store the response and its embedding in the database
-        self.database.store_response('answers', response, response_embedding)
-        return response
 
     # Insert the response vector into the database
     cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (response.tolist(),))
