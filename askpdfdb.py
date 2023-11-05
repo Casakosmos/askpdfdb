@@ -11,6 +11,9 @@ import psycopg2
 from psycopg2.extensions import register_adapter, AsIs
 import cohere
 import numpy as np
+import os
+import shutil
+
 
 cohere_key = "{YOUR_COHERE_API_KEY}"
 openai_key = "{YOUR_OPENAI_API_KEY}"
@@ -27,41 +30,34 @@ os.environ["OPENAI_API_KEY"] = "<OPENAI_API_KEY>"
 
 
 
+
 class PDFEmbedder:
+    def __init__(self, cohere_key, openai_key):
+        self.cohere_client = cohere.Client(cohere_key)
+        self.openai_embedding_model = openai.model('text-embedding-ada-002')
+        self.openai_tokenizer_model = openai.model('text-davinci-003')
 
     def get_cohere_embedding(self, text):
-        # This function should return a list representing the embedding of the input text using the Cohere API.
-        embedding = co.embed([text], input_type="search_document", model="embed-multilingual-v3.0").embeddings
+        embedding = self.cohere_client.embed([text], input_type="search_document", model="embed-multilingual-v3.0").embeddings
         return np.asarray(embedding)
 
+    def get_openai_embedding(self, text):
+        response = self.openai_embedding_model.embed(text)
+        return response['embeddings']
 
-    def get_embeddings():
-        return openai.model('text-embedding-ada-002')
+    def get_token_count(self, text):
+        return self.openai_tokenizer_model.token_count(text)
 
 
-    def create_embedding(self, content):
-        embeddings = get_embeddings()
-        return embeddings.embed_query(content)
-
-    def embedding(text, **kw):
-        model = kw.get('model','text-embedding-ada-002')
-        llm = openai.model(model)
-        resp = llm.embed(text, **kw)
-        resp['model'] = model
-        return resp
-
-    tokenizer_model = openai.model('text-davinci-003')
-    def get_token_count(text):
-        return tokenizer_model.token_count(text)
 
 class PDFProcessor:
-
-
-    def __init__(self, folder_name):
+    def __init__(self, folder_name, chunk_size=1024, chunk_overlap=50):
         self.folder_name = folder_name
+        self.chunk_size = chunk_size
+        self.chunk_overlap = chunk_overlap
         self.text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size = 512,
-            chunk_overlap = 24,
+            chunk_size = self.chunk_size,
+            chunk_overlap = self.chunk_overlap,
             length_function = get_token_count,
         )
 
@@ -78,7 +74,20 @@ class PDFProcessor:
 
     def _extract_text(self, filepath):
         doc = textract.process(filepath)
-        return doc.decode('utf-8')
+        text = doc.decode('utf-8')
+        return self._sanitize_text(text)
+
+    def _sanitize_text(self, text):
+        # Remove special characters
+        sanitized_text = re.sub(r'\W', ' ', text)
+        
+        # Convert to lowercase
+        sanitized_text = sanitized_text.lower()
+        
+        # Remove extra spaces
+        sanitized_text = re.sub(r'\s+', ' ', sanitized_text).strip()
+        
+        return sanitized_text
 
     def _save_text_to_file(self, filename, text):
         with codecs.open('./text/' + filename[:-4] + '.txt', 'w', 'utf-8') as f:
@@ -87,47 +96,47 @@ class PDFProcessor:
     def _split_text(self, text):
         return self.text_splitter.create_documents([text])
 
+    def prompt_for_download(self):
+        for filename in os.listdir(self.folder_name):
+            if filename.endswith(".pdf"):
+                download = input(f"Do you want to download {filename}? (yes/no): ")
+                if download.lower() != "yes":
+                    os.remove(os.path.join(self.folder_name, filename))
+                    print(f"{filename} has been deleted.")
+                else:
+                    destination = "/tmp"
+                    shutil.move(os.path.join(self.folder_name, filename), os.path.join(destination, filename))
+                    print(f"{filename} has been moved to {destination}.")
+                    print(f"To retrieve the file, use the following command (you may need to use sudo):")
+                    print(f"sudo mv /tmp/{filename} ~/")
 
 
-def connect_to_database():
 
 
-    # Connect to PostgreSQL database
-    conn = psycopg2.connect(database="my_database", user="username", password="password", host="localhost", port="5432")
+class DatabaseManager:
+    def __init__(self, database, user, password, host, port):
+        self.conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
+        self.cursor = self.conn.cursor()
+        self.cursor.execute('CREATE EXTENSION IF NOT EXISTS pgvector')
 
-    # Create a cursor object
-    cursor = conn.cursor()
+    def create_table(self):
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
 
-    # Add this line after establishing the connection
-    cursor.execute('CREATE EXTENSION IF NOT EXISTS pgvector')
+   def insert_vector(self, vector):
+        self.cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (vector.tolist(),))
+        self.conn.commit()
 
-    # Create vss_articles table
-    cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
+    def search_vectors(self, vector):
+        self.cursor.execute("SELECT * FROM vss_articles ORDER BY headline_embedding <-> ? LIMIT 10;", (vector.tolist(),))
+        return self.cursor.fetchall()
 
-    # Array to hold all chunks
-    all_chunks = []
+    def close(self):
+        self.conn.close()
 
-    return conn, cursor
-
-conn, cursor = connect_to_database()
-create_match_documents_function(cursor)
-
-
-def create_match_documents_function(cursor):
-    function_definition = """
-    CREATE OR REPLACE FUNCTION match_documents(query_embedding vector(1536), match_threshold float, match_count int)
-    RETURNS TABLE (id serial, headline_embedding vector(1536), similarity float)
-    LANGUAGE sql STABLE
-    AS $$
-    SELECT vss_articles.id, vss_articles.headline_embedding, 1 - (vss_articles.headline_embedding <=> query_embedding) AS similarity 
-    FROM vss_articles 
-    WHERE 1 - (vss_articles.headline_embedding <=> query_embedding) > match_threshold 
-    ORDER BY similarity DESC 
-    LIMIT match_count;
-    $$;
-    """
-    cursor.execute(function_definition)
-
+db = DatabaseManager("my_database", "username", "password", "localhost", "5432")
+db.create_table()
+# insert and search vectors...
+db.close()
 ###
 
 class UserInteraction:
@@ -137,7 +146,7 @@ class UserInteraction:
         self.database = database
         self.temp_embeddings = {}
 
-        
+
     def get_user_query(self):
         query = input("Enter a query (type 'exit' to quit): ")
         return query
