@@ -122,7 +122,7 @@ class DatabaseManager:
     def create_table(self):
         self.cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
 
-   def insert_vector(self, vector):
+    def insert_vector(self, vector):
         self.cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (vector.tolist(),))
         self.conn.commit()
 
@@ -133,73 +133,94 @@ class DatabaseManager:
     def close(self):
         self.conn.close()
 
+
+    def perform_vector_similarity_query(self, table_name, embedding, match_threshold=0.78, match_count=10, min_content_length=50):
+        # Convert the embedding to a list
+        embedding_list = embedding.tolist()
+
+        # Execute the SQL query
+        self.cursor.execute(f"""
+            SELECT * 
+            FROM {table_name} 
+            WHERE LENGTH(content) >= %s
+            ORDER BY embedding <-> %s 
+            LIMIT %s
+        """, (min_content_length, embedding_list, match_count))
+
+    # Fetch the results
+    results = self.cursor.fetchall()
+
+    # Filter the results based on the match_threshold
+    filtered_results = [result for result in results if result['similarity'] >= match_threshold]
+
+    return filtered_results    
+    # Fetch the results
+    results = self.cursor.fetchall()
+    
+    # Filter the results based on the match threshold
+    results = [result for result in results if result['similarity'] >= match_threshold]
+    
+    return results
+
 db = DatabaseManager("my_database", "username", "password", "localhost", "5432")
 db.create_table()
 # insert and search vectors...
 db.close()
 ###
 
-class UserInteraction:
-    def __init__(self, cohere_client, openai_client, database):
-        self.cohere_client = cohere_client
-        self.openai_client = openai_client
+
+class QueryProcessor:
+    def __init__(self, embedder, database):
+        self.embedder = embedder
         self.database = database
         self.temp_embeddings = {}
+        self.sanitized_query = None
 
+    def sanitize_query(self, query):
+        self.sanitized_query = re.sub(r'\W', ' ', query)
+        self.sanitized_query = self.sanitized_query.lower()
+        self.sanitized_query = re.sub(r'\s+', ' ', self.sanitized_query).strip()
+
+    def generate_and_store_embeddings(self):
+        cohere_embedding = self.embedder.get_cohere_embedding(self.sanitized_query)
+        openai_embedding = self.embedder.get_openai_embedding(self.sanitized_query)
+        self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
+        self.temp_embeddings[self.sanitized_query] = cohere_embedding
+
+class UserInteraction:
+    def __init__(self, query_processor):
+        self.query_processor = query_processor
+        self.chat_history = []
 
     def get_user_query(self):
         query = input("Enter a query (type 'exit' to quit): ")
         return query
 
-
-
-    def sanitize_query(query):
-        # Remove special characters
-        sanitized_query = re.sub(r'\W', ' ', query)
-        
-        # Convert to lowercase
-        sanitized_query = sanitized_query.lower()
-        
-        # Remove extra spaces
-        sanitized_query = re.sub(r'\s+', ' ', sanitized_query).strip()
-        
-        return sanitized_query
-
-
     def interact(self):
-        """
-        This method handles the interaction with the user. It runs in a loop until the user types 'exit'.
-        
-        In each iteration of the loop, it performs the following steps:
-        
-        1. Gets a raw query from the user using the `get_user_query` method.
-        2. If the user types 'exit', it breaks the loop and ends the interaction.
-        3. Otherwise, it sanitizes the query using the `sanitize_query` method. This involves removing special characters, converting to lowercase, and removing extra spaces.
-        4. It then generates and stores embeddings for the sanitized query using the `generate_and_store_embeddings` method. This involves generating embeddings for the query using both Cohere and OpenAI, combining the embeddings, and storing them in the database.
-        5. It generates a response to the query using the `generate_response` method. This involves retrieving the stored embeddings from the database, generating a response based on the embeddings, and storing the response in the database.
-        6. It adds the sanitized query and the response to the chat history.
-        7. Finally, it prints the response.
-        """
         while True:
             raw_query = self.get_user_query()
             if raw_query.lower() == "exit":
                 break
-            sanitized_query = self.sanitize_query(raw_query)
-            self.generate_and_store_embeddings(sanitized_query)
-            response = self.generate_response(sanitized_query)
-            self.chat_history.append((sanitized_query, response))
+            self.query_processor.sanitize_query(raw_query)
+            self.query_processor.generate_and_store_embeddings()
+            response = self.generate_response()
+            self.chat_history.append((self.query_processor.sanitized_query, response))
             print(response)
 
+    def generate_response(self):
+        openai_embedding = self.query_processor.database.retrieve_embedding('questions', self.query_processor.sanitized_query)
+        cohere_embedding = self.query_processor.temp_embeddings[self.query_processor.sanitized_query]
+        similar_texts = self.query_processor.database.perform_vector_similarity_query('texts', cohere_embedding)
+        response = self.generate_response_based_on_similar_texts(similar_texts)
+        response_embedding = self.query_processor.openai_client.embed(response)
+        self.query_processor.database.store_response('answers', response, response_embedding)
+        return response
 
 
-    def generate_and_store_embeddings(self, query):
-        # Generate embeddings for the query using both Cohere and OpenAI
-        cohere_embedding = self.cohere_client.embed(query)
-        openai_embedding = self.openai_client.embed(query)
-        # Store the OpenAI embedding in the database
-        self.database.store_embedding('questions', query, openai_embedding)
-        # Store the Cohere embedding in memory
-        self.temp_embeddings[query] = cohere_embedding
+
+
+
+
  
     def build_prompt(query, similar_sections):
         # Combine the query and the similar sections
