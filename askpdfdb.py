@@ -29,10 +29,11 @@ os.environ["OPENAI_API_KEY"] = "<OPENAI_API_KEY>"
 
 class PDFEmbedder:
 
-    def get_cohere_embedding(text):
+    def get_cohere_embedding(self, text):
         # This function should return a list representing the embedding of the input text using the Cohere API.
         embedding = co.embed([text], input_type="search_document", model="embed-multilingual-v3.0").embeddings
         return np.asarray(embedding)
+
 
     def get_embeddings():
         return openai.model('text-embedding-ada-002')
@@ -134,8 +135,9 @@ class UserInteraction:
         self.cohere_client = cohere_client
         self.openai_client = openai_client
         self.database = database
-        self.chat_history = []
+        self.temp_embeddings = {}
 
+        
     def get_user_query(self):
         query = input("Enter a query (type 'exit' to quit): ")
         return query
@@ -180,25 +182,21 @@ class UserInteraction:
             print(response)
 
 
+
     def generate_and_store_embeddings(self, query):
         # Generate embeddings for the query using both Cohere and OpenAI
-        # Combine the embeddings
-        # Store the combined embeddings in the database
-        pass
-
-    def generate_response(self, query):
-        # This method should generate a response to the user's query.
-        # The actual implementation will depend on the specific method you're using to generate responses.
-        pass
-    # Use ai.py's embedding function to generate a response
-    result = embedding({"question": query, "chat_history": chat_history})
-
+        cohere_embedding = self.cohere_client.embed(query)
+        openai_embedding = self.openai_client.embed(query)
+        # Store the OpenAI embedding in the database
+        self.database.store_embedding('questions', query, openai_embedding)
+        # Store the Cohere embedding in memory
+        self.temp_embeddings[query] = cohere_embedding
  
-   def build_prompt(query, similar_sections):
+    def build_prompt(query, similar_sections):
         # Combine the query and the similar sections
         prompt = f"Question: {query}\n\nContext sections:\n{similar_sections}"
         return prompt
-
+    
     def text_completion(prompt):
         # Send the prompt to the OpenAI API to generate a text completion
         response = openai.Completion.create(
@@ -235,13 +233,20 @@ class UserInteraction:
     cursor.execute("SELECT * FROM vss_articles ORDER BY headline_embedding <-> ? LIMIT 10;", (query_vector.tolist(),))
 
     
-    def generate_response(similar_vectors):
-        # TODO: Implement logic to generate a response based on the most similar vectors
-        pass
-    # Generate a response based on the most similar vectors
-    response = generate_response(cursor.fetchall())
-
-
+    def generate_response(self, query):
+        # Retrieve the stored OpenAI embedding from the database
+        openai_embedding = self.database.retrieve_embedding('questions', query)
+        # Retrieve the Cohere embedding from memory
+        cohere_embedding = self.temp_embeddings[query]
+        # Perform a vector similarity query in the database using the Cohere embedding
+        similar_texts = self.database.perform_vector_similarity_query('texts', cohere_embedding)
+        # Generate a response based on the most similar texts
+        response = self.generate_response_based_on_similar_texts(similar_texts)
+        # Embed the response using the OpenAI API
+        response_embedding = self.openai_client.embed(response)
+        # Store the response and its embedding in the database
+        self.database.store_response('answers', response, response_embedding)
+        return response
 
     # Insert the response vector into the database
     cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (response.tolist(),))
