@@ -223,13 +223,30 @@ class UserInteraction:
         # Generate a response based on the most similar texts
         response = self.generate_response_based_on_similar_texts(similar_questions, similar_answers)
         
+        return response
+
         # Embed the response using the OpenAI API
         response_embedding = self.query_processor.openai_client.embed(response)
+
+
+        # Build the prompt
+        prompt = self.build_prompt(self.query_processor.sanitized_query, similar_texts)
+        
+        
+
+        # Make a text completion request via the OpenAI API
+        event_stream = self.text_completion(prompt)
+        
+        
+
+        # Process the event stream and generate the final response
+        response = self.process_event_stream(event_stream)
+
         
         # Store the response and its embedding in the 'answers' table
         self.query_processor.database.store_response('answers', response, response_embedding)
         
-        return response
+        
 
 
 
@@ -238,12 +255,15 @@ class UserInteraction:
 
 
  
-    def build_prompt(query, similar_sections):
+    def build_prompt(self, query, similar_sections):
         # Combine the query and the similar sections
-        prompt = f"Question: {query}\n\nContext sections:\n{similar_sections}"
+        prompt = f"You are a scholar that posesses knowledge of philosophy at a phd level and excel at explaining while at the same time being concise, clear and demonstrating a masterful use of logic and philosophical terminology: {query}\n\nContext sections:\n{similar_texts}"
         return prompt
-    
-    def text_completion(prompt):
+
+
+
+
+    def text_completion(self, prompt):
         # Send the prompt to the OpenAI API to generate a text completion
         response = openai.Completion.create(
             engine="gpt-4",
@@ -254,7 +274,7 @@ class UserInteraction:
         )
         return response
 
-    def process_event_stream(event_stream):
+    def process_event_stream(self, event_stream):
         final_response = ""
         try:
             # Parse the event stream and concatenate the text completions
@@ -264,6 +284,7 @@ class UserInteraction:
         except Exception as e:
             print(f"An error occurred: {e}")
         return final_response
+
 
     # Convert the result into a query vector
     query_vector = result['embeddings']
