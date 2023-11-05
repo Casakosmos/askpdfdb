@@ -122,8 +122,8 @@ class DatabaseManager:
     def create_table(self):
         self.cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
 
-    def insert_vector(self, vector):
-        self.cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (vector.tolist(),))
+    def insert_vector(self, table_name, vector):
+        self.cursor.execute(f"INSERT INTO {table_name} (headline_embedding) VALUES (%s)", (vector.tolist(),))
         self.conn.commit()
 
     def search_vectors(self, vector):
@@ -147,20 +147,13 @@ class DatabaseManager:
             LIMIT %s
         """, (min_content_length, embedding_list, match_count))
 
-    # Fetch the results
-    results = self.cursor.fetchall()
+        # Fetch the results
+        results = self.cursor.fetchall()
 
-    # Filter the results based on the match_threshold
-    filtered_results = [result for result in results if result['similarity'] >= match_threshold]
+        # Filter the results based on the match_threshold
+        filtered_results = [result for result in results if result['similarity'] >= match_threshold]
 
-    return filtered_results    
-    # Fetch the results
-    results = self.cursor.fetchall()
-    
-    # Filter the results based on the match threshold
-    results = [result for result in results if result['similarity'] >= match_threshold]
-    
-    return results
+        return filtered_results  
 
 db = DatabaseManager("my_database", "username", "password", "localhost", "5432")
 db.create_table()
@@ -184,8 +177,15 @@ class QueryProcessor:
     def generate_and_store_embeddings(self):
         cohere_embedding = self.embedder.get_cohere_embedding(self.sanitized_query)
         openai_embedding = self.embedder.get_openai_embedding(self.sanitized_query)
-        self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
-        self.temp_embeddings[self.sanitized_query] = cohere_embedding
+        
+
+        # Perform vector similarity query on the 'texts' table using the Cohere embedding
+        similar_texts = self.database.perform_vector_similarity_query('texts', cohere_embedding)
+        
+        # Delete the Cohere embedding from memory
+        del self.temp_embeddings[self.sanitized_query]
+        
+        return similar_texts
 
 class UserInteraction:
     def __init__(self, query_processor):
@@ -208,13 +208,29 @@ class UserInteraction:
             print(response)
 
     def generate_response(self):
+        # Retrieve the OpenAI embedding from the 'questions' table
         openai_embedding = self.query_processor.database.retrieve_embedding('questions', self.query_processor.sanitized_query)
-        cohere_embedding = self.query_processor.temp_embeddings[self.query_processor.sanitized_query]
-        similar_texts = self.query_processor.database.perform_vector_similarity_query('texts', cohere_embedding)
-        response = self.generate_response_based_on_similar_texts(similar_texts)
+        
+        # Perform a vector similarity query in the 'questions' and 'answers' tables using the OpenAI embedding
+        similar_questions = self.query_processor.database.perform_vector_similarity_query('questions', openai_embedding)
+        similar_answers = self.query_processor.database.perform_vector_similarity_query('answers', openai_embedding)
+        
+        
+        # Store the OpenAI embedding in the 'questions' table
+        self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
+        
+
+        # Generate a response based on the most similar texts
+        response = self.generate_response_based_on_similar_texts(similar_questions, similar_answers)
+        
+        # Embed the response using the OpenAI API
         response_embedding = self.query_processor.openai_client.embed(response)
+        
+        # Store the response and its embedding in the 'answers' table
         self.query_processor.database.store_response('answers', response, response_embedding)
+        
         return response
+
 
 
 
