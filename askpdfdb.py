@@ -126,13 +126,9 @@ class DatabaseManager:
         self.cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
 
     def insert_vectors(self, table_name, vectors):
-        # Prepare the SQL query
         sql = f"INSERT INTO {table_name} (headline_embedding) VALUES %s"
-        # Prepare the data
         data = [(vector.tolist(),) for vector in vectors]
-        # Execute the SQL query
         self.cursor.executemany(sql, data)
-        # Commit the changes
         self.conn.commit()
         
     def search_vectors(self, vector):
@@ -370,3 +366,4 @@ if __name__ == "__main__":
 
 
 print("Exited!!!")
+
