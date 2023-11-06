@@ -1,0 +1,1807 @@
+The Stoics on Bodies and Incorporeals
+Author(s): Marcelo D. Boeri
+Source: The Review of Metaphysics , Jun., 2001, Vol. 54, No. 4 (Jun., 2001), pp. 723-752
+Published by: Philosophy Education Society Inc.
+Stable URL: https://www.jstor.org/stable/20131617
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide
+range of content in a trusted digital archive. We use information technology and tools to increase productivity and
+facilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at
+https://about.jstor.org/terms
+
+Philosophy Education Society Inc. is collaborating with JSTOR to digitize, preserve and extend
+access to The Review of Metaphysics
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+MARCELO D. BOERI
+I
+It WAS A WIDESPREAD view IN LATE ANTIQUITY that the Stoics main
+
+tained theses contrary to common conceptions?absurd, incompre
+hensible, or simply false. In other words, the Stoics were generally ac
+cused of having been guilty of incongruity, self-contradiction, and
+absurdity.1 Indeed some specific Stoic claims2 must have been partic
+ularly baffling for authors coming from the Platonic and Aristotelian
+tradition, mostly because these sorts of tenets were in disagreement
+with some basic assumptions of such a tradition. Alexander of Aphro
+disias, for example, correctly suggests that the tensional movement,
+Correspondence to: Campos Salles 1853, Dto. 2, (1492) Cuidad Buenos
+
+Aires, Argentina.
+
+Plutarch, On common conceptions 1073D-1074C. See Herman von
+
+Arnim, Stoicorum Veterum Fragmenta (hereafter, "SVF"), 3 vols. (Leipzig:
+
+Teubner, 1903-5), 2:525. On common conceptions 1081C (SVF 2:519; An
+
+thony A. Long and David N. Sedley, The Hellenistic Philosophers [hereafter,
+"LS," followed by the section and text number], 2 vols. [Cambridge: Cam
+bridge University Press, 1987], 51C). See also Alexander of Aphrodisias, On
+
+mixture, 223, 18-20, from Alexandri Aprodisiensis praeter Commentaria
+Scripta Minora, ed. Iva Bruns, in Commentaria in Aristotelem Graeca,
+
+suppl. 2.2 (Berlin: Reimer, 1892), where the Stoic doctrine of KVEv\ia is said
+to be absurd and false. On this topic see the remarks by Robert B. Tood, Al
+exander of Aphrodisias on Stoic Physics: A Study of the De mixtione with
+
+Preliminary Essays, Text, Translation and Commentary (Leiden: E. J.
+Brill, 1976), 29-49. See also Plotinus, Ennead 6.1, 25 {SVF 2:316), who calls
+the Stoic thesis of supreme genus "incomprehensible and absurd" ( aovvexov
+atJTo?? xai aXoyov). By "Stoics" or "Stoicism" I mean especially the early Sto
+icism, namely the doctrines attributed to Zeno, Cleanthes, and Chrysippus.
+2 See especially those topics related to (a) the "tensional" movement of
+jtveD^a; (b) the assertion that "one body is place for another and one body
+
+passes through another"; Plutarch, On common conceptions 1077E (this
+translation is my own and is based on Harold Cherniss's text, Plutarch's Mor
+alia, Part II [Cambridge, Mass.: Harvard University Press, 1976]; translations
+
+are my own, unless otherwise stated); Alexander of Aphrodisias, On mix
+ture, 223, 18 (with Todd's comments on the issue, Alexander of Aphrodisias
+
+on Stoic Physics, 81-8) and (c) the basic ontological distinction between
+
+body or existent (o?>u.a-T? ?v) and incorporeal or nonexistent (aoob^axov-x?
+^ifi ?v). For this last topic see the further evidence quoted below in note 10.
+
+The Review of Metaphysics 54 (June 2001): 723-752. Copyright ? 2001 by The Review of
+
+Metaphysics
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+724
+
+MARCELO D. BOERI
+
+attributed by the Stoics to Jtve?3?ia, does not fall into the Aristotelian
+
+classification of xlvti?lc.3 No doubt Alexander is right in noting this
+
+point because, according to Aristotle's view, jrvei3?ia's movement
+would be neither substantial (generation/destruction), quantitative
+(increase/diminution), qualitative (alteration), nor locative (locomo
+tion). Nonetheless Alexander's attempt to reject the Stoic thesis of
+tensional movement on this ground is misleading. The fact that the
+tensional movement is not included in Aristotle's scheme does not
+show that such a type of movement does not exist or that it is not pos
+
+sible to explain phenomena making use of an explanatory mechanism
+in which the tensional movement is crucial. It only indicates the im
+possibility of trying to grasp Jtveu^ia and its properties with criteria
+which turn out to be useless for the assessment of such an entity that
+
+is for the most part described in our sources as moving "simulta
+neously inwards and outwards" (xovixf|v Tiva eivai x?vr|Gtv jtbqL x?
+o(b[iaxa 8l? to e?oco ?|ia xai ei? to e^oo xivou?i?vriv).4
+
+I have cited and briefly commented on Alexander's remark
+
+against the Stoics because I think that this type of criticism is repre
+sentative of what we can find in the testimonies for early Stoicism,
+particularly in those sources hostile to the Stoics, such as Plotinus, Pl
+utarch, Galen, and of course Alexander himself. Plotinus, for exam
+
+ple, seems to be attacking the Stoic doctrine of principles when he
+says that if something is active and involves in some sense the charac
+teristics of a form (or of an energeia), this something cannot be bodily
+or material. In other words, Plotinus cannot accept the Stoic thesis of
+the material principles5 for, as he puts it,
+
+3 Alexander seems to suggest this when saying "xai nax? xi ei?o?
+
+xivr|0? ? vivrai [that is, the JtveD^ia]; xaT3 ov??v y?g otov t3 ?oTi vofjoai tl
+a^ia etc x? evavTia xivo?^ievov xa?' aire?"; On mixture, 224, 25-7. On Aris
+totle's distinction of the different kinds of xivr|Oi?, see Categories 14.15al3
+
+14.
+
+4 Nemesius, On the nature of man, 18, 5-8, in Nemesi Emeseni De
+natura hominis, ed. Moreno Morani (Leipzig: Teubner, 1987), {SVF 2:451;
+LS, 47J); Simplicius, On Aristotle's Categories, 269, 14, from In Aristotelis
+
+Categorias Commentarium, ed. Karl Kalbfleisch, in Commentatia in Aris
+
+totelem Graeca, vol. 2 (Berlin: Reimer, 1907), (SVF, 2.452). For Alexander's
+version of the issue see On mixture, 224, 24-5 (SVF 2:442; LS, 471): " Jtve?3?ia
+XLvoi)ji8vov ?c^ia eS; ai5Toi3 xe xai etc aire?"; and Todd's remarks in Alexander
+of Aphrodisias on Stoic Physics, 219.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+725
+
+god for them [namely for the Stoics] is posterior to matter as well, for it
+is <conceived of as> a body composed of matter and form. And where
+did it get its form from? But if he does not have matter, because of hav
+
+ing the nature of a principle, that is to say, because of being reason
+(aQxoeibri? oov xai X?yoc), then god would have to be incorporeal, and
+the active would have to be incorporeal (?oobjiaTo? ?v e?r\ o 6e?c, xai t?
+jroLT]TLX?v aoob^iaTov).... then, how could matter be a principle if it is a
+
+body?6
+
+In fact, for Plotinus to tl^ilov, that which involves greater value,7
+does not pertain to the sphere of the corporeal, since this is directly
+
+related to the material things that, as material, imply passivity and
+lack of form. Plutarch is in the same line of thought when arguing that
+if the Stoic god is neither something pure nor something simple but
+
+something composed, he must be dependent on something else (for
+the Stoics, matter, in being simple, involves the features of a princi
+ple).8 By contrast, the Stoics held that only corporeal things have a
+
+5 t? Jtoio?jv 9e?c; t? Jt?o/ov ?jcoio? ovo?a, vXr\. Both principles are as
+
+sumed to be bodies. For evidence see Diogenes Laertius 7.134-5 (SVF 1:85,
+2:299, 2:300; LS, 44B, 45E, 50E). In Diogenes Laertius 7.134.17 (H. S. Long's
+text, Diogenis Laertii Vitae Philosophorvm [Oxonii: Scriptorum Classi
+corum Bibliotheca Oxoniensis, 1964]), I read o(b\iaxa, following MSS. Both
+von Arnim (SVF 2:299) and H. S. Long read aocojiorcouc following the Suda
+
+lexicon. This reading puts forward philological as well as philosophical prob
+lems. As noted by Jaap Mansfeld, "Zeno of Citium: Critical Observations on a
+Recent Study," Mnemosyne 31, no. 2 (1978): 162-3 and 169, it is likely that
+?ocDiicrcou? is an anticipation of ?[iOQ(j)ou?;, which is said of the principles as
+well, von Arnim's reading (followed by Robert B. Todd, "Monism and Imma
+
+nence: The Foundations of Stoic Physics," in The Stoics, ed. John M. Rist
+[Berkeley and Los Angeles: University of California Press, 1978], 139-43)
+goes against a number of testimonies maintaining that, according to the Sto
+ics, a real cause is what is bodily. Indeed, god is a cause. The new edition of
+
+the Diogenes Laertius text by Miroslav Marcovich, Diogenis Laertii Vitae
+
+Philosophorvm (Stuttgart and Leipzig: Teubner, 1999) gives o(b\iaxa follow
+ing the MSS. On this point, see LS 1:273-4, who argue in favor of the reading
+oobfiaTa on the ground of strong philosophical reasons.
+
+6 See Plotinus, Ennead 6.1, 26, 11-17 (SVF 3:315; the same remark oc
+
+curs at Ennead 2.9, 1). The passage is quoted following the text established
+
+by Paul Henry and Hans-Rudolph Schwyzer, Plotini Opera (Leiden: E. J.
+Brill, 1973).
+7 Plotinus, Ennead 6.1, 27; SVF 2:314.
+
+8 An unbelievable assertion to Plutarch (On common conceptions
+
+1085B-D, partially quoted by LS, 47G; see also SVF 2:444). On the Stoic prin
+ciples see Diogenes Laertius 7.134 (SVF 1:85; LS, 44B) and Michael Lapidge,
+"aQxai and OTOi/eta: A Problem in Stoic Cosmology," Phronesis 18 (1973): es
+
+pecially 244-53.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+726
+
+MARCELO D. BOERI
+
+real causal power with respect to other things. It seems to me that
+this thesis contains an implicit and serious attack on the Platonic and
+Aristotelian view according to which forms and ends are not only the
+real causal factors but also the items that especially deserve to be
+called causes, at least if they are compared to the material things
+whose causal agency is primarily restricted to the domain of neces
+sary conditions.9
+Among the ancient authors there was a wide acceptance that the
+Stoics were the champions of the idea that the corporeal is the essen
+tial hallmark of the existent.10 According to the Stoic orthodoxy,
+something is actually real if it is corporeal. Thus, the Stoic philoso
+phers did leave aside the Platonic and Aristotelian ontology which
+gave the intelligible the highest place in the hierarchy of beings, and
+they did so by maintaining that only what is corporeal is capable of
+acting or of being acted upon.11 The Stoics are also said to have devel
+oped a complex theory of incorporeals (?o(b\iaxa), "somethings"
+which, albeit nonexistent in a strict sense, are subsistent.12 But if the
+
+9 See Plato, Phaedo 99b, Timaeus 48a-c, and Aristotle, Physics
+
+2.9.200a5-15. For Aristotle a principle must be something primary, namely it
+
+must not come from another thing (Physics 1.5.188a26-30). He considers
+that form (eldos) as a principle is the terminus ad quern of generation (see
+1.9.192al6-30 and especially 193a30-bl2, where Aristotle tries to show that
+in the matter/form relationship, form is prior to and determinant of matter.
+Form, in fact, determines matter in virtue of its active character). On the is
+sue that the real cause of something is a body acting upon another body see
+
+Michael Frede, "The Original Notion of Cause," in Doubt and Dogmatism:
+Studies in Hellenistic Epistemology, ed. Malcolm Schofield, Myles Burn
+yeat, and Jonathan Barnes (Oxford: Clarendon Press, 1980), especially 221
+34. Reprinted in Michael Frede, Essays in Ancient Philosophy (Minneapo
+
+lis: University of Minnesota Press, 1987), 125-50; in what follows I cite from
+the 1980 edition. Anna Maria Ioppolo, "II concetto di causa nella filosof?a el
+lenistica e romana," in Aufstieg und Niedergang der r?mischen Welt, ed.
+Wolfgang Haase (Berlin and New York: Walter de Gruyter, 1994), 4494-505.
+10 For evidence see especially Plutarch, On common conceptions 1073E
+(included in SVF 2:525): "ovto y?Q M^?va Ta o(b\iaxa naXovoiv ?jtei?ri ovto?
+t? Jtoie?v Ti xai Jt?o/eiv." As indicated above (note 2), in the citations of Plu
+tarch I follow Cherniss's text, Plutarch's Moralia. Plotinus, Ennead 6.1, 28
+
+(included in SVF 2:319): "to yag oob^iaTa vo?i?oavT?c dvai Ta ?vTa." Alex
+
+ander of Aphrodisias, On Aristotle's Topics, 301, 22-3, from In Aristotelis
+Topicorum libros octo Commentaria, ed. Maximilianus Wallies, in Commen
+
+taria in Aristotelem Graeca 2.2 (Berlin: Reimer, 1891), (included in SVF
+
+2:329 and in LS, 27B): " exetvoi (that is, the Stoics) vo|io6eTr|oavT?? a?TO?? t?
+?v xaT? o(x)\i?x(x)v ^t?voov ?iyeoGai."
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+727
+
+things truly existent are bodies, what role do incorporeals play in
+Stoic ontology? Why did the Stoic philosophers consider it necessary
+to put forward a strict distinction between the corporeal and the in
+
+corporeal in their world's explanation, an explanation so strongly
+dominated by the thesis that only the bodily beings are real? These
+are some of the questions this paper intends to answer.
+In the first part, I shall begin by making reference to some An
+cient interpretations of the Stoic doctrine of incorporeals. At this
+point I hope to show that some views on Stoicism held by authors like
+Proclus, Plutarch, or Alexander are misleading, mostly because either
+they take incorporeals to be secondary realities (bodies being the pri
+mary ones) or because they raise their objections to Stoic claims start
+ing from quite a different conceptual scheme. Although the view that
+
+incorporeals are inferior realities would seem to be plausible (and in
+fact this view has been accepted by conspicuous contemporary schol
+ars), I shall endeavor to demonstrate that this sort of interpretation is
+not consistent with Stoic philosophy as a whole and that, accordingly,
+
+11 As David Hahm points out, the characterization of body as what is ca
+
+pable of acting or of being acted upon does not appear in our sources as a
+theoretical definition but it is always presupposed in a number of arguments
+
+as a distinctive aspect of what is a body. See his The Origins of Stoic Cos
+mology (Columbus: Ohio State University Press, 1977), 3. See also Cicero,
+Acad?mica 1.39 (SVF 1:90; LS, 45A); Sextus Empiricus, Adversus Mathemat
+icos 8.263 (SVF 2.363; LS, 45B); Tertulian, On the Soul, chapter 5; Nemesius,
+
+On the nature of man 21, 6-9; Diogenes Laertius 7.5 (SVF 2:40), 7.55 (SVF
+2:40; LS, 33H); Seneca, Letters 106, 2-7 (SVF 3:84).
+12 See Sextus Empiricus, Adversus Mathematicos 9.212. For the distinc
+tion "existent" (?v)?"subsistent" (?)(|)iOT?^?vov) in connection with the issue
+of time see Stobaeus, Excerpts 1.106, 5-23, from Joannis Stobaci Anthologii
+libri duo miores qui inscrib? soient eclogae physicae et ethicae, ed. Curtius
+
+Wachsmuth (Berlin: Weidmann, 1884), (SVF 2:509; LS, 51B); Alexander, On
+
+Aristotle's Topics, 301, 19-25 (SVF 2:329; LS, 27B) and Victor Goldschmidt,
+"vn?QXEiv et vfyzox?va? dans la philosophie sto?cienne," Revue des ?tudes
+Grecques 85 (1972): 331-444. A thoughtful discussion on ^exTci, one of the in
+corporeals, can be found in Anthony A. Long, "Language and Thought in Sto
+icism," in Problems in Stoicism, ed. Anthony A. Long (London: The Athlone
+
+Press, 1971), especially 88-90, and most recently LS 1:163-76 and Michael
+
+Frede, "The Stoic Notion of a lekton," in Companions to Ancient Thought 3.
+
+Language, ed. Stephen Everson (Cambridge: Cambridge University Press,
+
+1994), 109-28. See also the essay by Jacques Brunschwig, "On a Stoic Way of
+Not Being," in his Papers in Hellenistic Philosophy, trans. Janet Lloyd (Cam
+bridge: Cambridge University Press, 1994), 158-69, who also deals with the
+
+Stoic notion of incorporeals and interestingly discusses some topics con
+
+nected with the Stoic psychology of action and lekta.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+728
+
+MARCELO D. BOERI
+
+incorporeals can plausibly be thought to be of such a kind that they
+turn out to be essential in accounting for bodily things as well. Sec
+ond, and following this line of thought, it will be suggested that bodies
+
+and incorporeals are complementary terms. At this point my argu
+ment will be that bodies and incorporeals serve to complement each
+other in the sense that one cannot exist without the other. Thus, be
+
+tween 0(b\iaxa and a?co^iaTa there seems to be a reciprocal depen
+dence. Finally, in the last part some key passages of Stoic physics and
+ethics (in which the mentioned dependence can be corroborated) will
+be examined and I shall provide arguments to clarify the corporeal/in
+corporeal issue in Stoic philosophy.
+
+II
+The four species of incorporeals (A,exT?v, xev?v, t?jtoc, xq?voc)
+are listed by Sextus Empiricus.13 As already indicated, due to their
+"physicalism,"14 the Stoics made corporeality the essential clue of the
+existent, of the real. Yet if the existent in the strict sense consists of
+bodies, one can legitimately raise doubts about the role (if any) incor
+poreals play in the Stoic account of reality. Some ancient authors
+have assumed that incorporeals must have a dependent way of being,
+and for this reason they were thought to be "subsistent." This was
+
+Proclus's view. He maintained that the Stoics made time a mere
+thought, insubstantial and very close to the nonexistent. This is so,
+
+Proclus goes on to argue, because time is one of the incorporeals,
+which are despised by Stoics as being inactive, nonexistent, and
+merely subsistent in mind (?v ?mvoiai? ?(j)ioT?[i?va ipi?m?).15
+In spite of what Proclus says, I do not think that the Stoics re
+
+garded incorporeals as secondary or dependent "somethings."16
+13 Sextus Empiricus, Adversus Mathematicos 10.218.
+141 am taking this terminology from Julia Annas, Hellenistic Philosophy
+of Mind (Berkeley and Los Angeles: University of California Press, 1992), 37
+
+8.
+
+15 See Proclus, On Plato's Timaeus 271D. I agree with LS 2:304, that
+
+"nothing in reported statements of Stoic philosophers justifies Proclus's re
+duction of time to a mere thought." According to Long and Sedley, Proclus
+may have been influenced by some doxographical formulations as Sextus,
+
+Adversus Mathematicos 10.277: "aoob^iaTov tl xa65 a?T? voo?jievov
+i)jt?OTT|oavTO Tov xq?vov." A very similar formulation occurs at Adversus
+
+Mathematicos 10.218 (SVF 2:331; LS, 27D).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+729
+
+Neither do they seem to have assumed that incorporeals should be de
+
+spised because of being inactive and nonexistent. The difficulty
+raised by Stoic philosophers is that, even though place, time, void, and
+sayables17 are incorporeal, they turn out to be fundamental to consti
+tute the realm of the existent. The case of time is especially sugges
+tive: despite being an incorporeal, time is a necessary condition for
+the constitution of objective reality (by "objective reality" I mean the
+realm of the corporeal things, the set of objects that constitute our
+"objective experience"). There is a passage in Clement of Alexandria,
+in a context that is supposed to be Stoic in character, where time is
+shown to be a cause in the sense of a necessary condition.18 In this
+text Clement says that time is that which offers the notion of the con
+ditions without which the effect cannot be produced (? ?? XQOvo? tc?v
+
+(bv oux aveu ^?yov eji?/ei).19 This is specially applied to the case of
+learning: the father is a preliminary cause (jiQoxaTaQXTix?v a?xiov) of
+learning, the teacher the synectic cause (?uvexTix?v a?/ciov), the natu
+ral disposition to learning is the auxiliary cause (ouvepyov a?/ciov),
+16 Nonetheless, this is what Andreas Graeser seems to think when point
+ing out that "in Stoic usage the Greek language equivalent to our 'subsist'
+clearly signifies what may be called a subordinate or rather dependent mode
+of existence, one that is distinct from being real in the sense of being tangible
+
+and thus capable of acting and being acted upon." See Graeser, "The Stoic
+
+Theory of Meaning," in The Stoics, ed. John M. Rist (Berkeley and Los Ange
+les: University of California Press, 1978), 89. Long ("Language and Thought
+in Stoicism," 90) seems to imply the same thing in saying that " hyphestanai
+hyphistasthai expresses a state subordinate to that denoted by hyparchein
+or einai." It is true, as Graeser observes, that an incorporeal like a lekton is
+not real in the sense of being tangible. As I hope to show, however, it does
+not follow from this that "the lekta are not something in the world"; Long,
+"Language and Thought in Stoicism," 89. In analyzing the Stoic theory of cat
+egories or genera of being, Graeser appears to imply the same thing. See An
+dreas Graeser, Zenon von Kition. Positionen und Probleme (Berlin and New
+York: Walter De Gruyter, 1975), 18^23.
+171 follow LS (section 33) in rendering lekta as "sayables." For recent
+discussion on the difficulties involved in translating the term lekton and its
+philosophical implications in Stoic philosophy, see Frede, "The Stoic Notion
+of a lekton," especially 110-19.
+18 Clement, Stromateis 8.9.25, from Clemens Alexandrinus. Stromata.
+VII und VIII, ed. Otto St?hlin and Ludwig Fr?chtel (Berlin: Akademie Verlag,
+1970), ( SVF 2:346). Indeed it would be inconsistent to speak of time as a spe
+cies of causality because, as suggested above, if a factor is a cause of another
+one, such a factor must be corporeal. Actually, evidence that time is a cause
+is scanty and Clement's example is, as far as I know, the only source which
+takes time to be a kind of causality.
+19 Clement, Stromateis 8.89, 24, 4.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+730
+
+MARCELO D. BOERI
+
+and time, finally, is the necessary condition of the learning process.
+Here it is suggested that learning, because it is a process, is supposed
+to imply a certain duration. In other words, if learning is understood
+as a process, it requires a before and an after: a before in which the in
+dividual has not yet learned and an after in which the individual has
+already learned. If one seeks to establish a coherent account of this
+phenomenon, one has to take into account time, because learning in
+
+volves a process that is only understandable in time which, despite
+being incorporeal, measures motions or shifts of corporeal things in
+orderly sequences.20 However, this does not resolve the aforemen
+tioned inconsistency, according to which time cannot be considered a
+
+cause in the strict sense because of being incorporeal. It could be
+suggested, though, that Clement is making reference to a very general
+use of the word "cause," one of the Stoic uses of the term.21 Following
+Clement's line of thought, according to which "if something is a 'be
+cause of which' (?i'o?) it is not in all cases also a cause" ("in the strict
+sense," I would add),22 one could think of time as being a cause just in
+the sense of a "because of which." As a result of the fact that time is
+
+an indispensable requirement for the explanation of any phenomenon
+in the material world, it is a "because of which" cause inasmuch as it
+gives assistance to the constitution of the existent, that which, in the
+strict sense, is a cause.
+Therefore, despite the fact that time is incorporeal, it is, like the
+other incorporeals, a necessary condition for the existence of bodies.
+All existent things must exist in a place; but in addition to this it is im
+possible to establish causal relations among things if there is no time,
+that is to say if there is no factor capable of setting the before and the
+after of the possible combinations among the existent things, so that
+it can be possible to determine, for example, that A in tx is a cause of B
+
+20 Chrysippus is said to have posited the basic distinction between time
+as the dimension of motion, according to which the measure of speed and
+slowness is spoken of, and time as the dimension "accompanying the world's
+motion"; Stobaeus, Excerpts 1.106, 5-9; see SVF 2:509; LS 1:304.
+21 See Frede, "The Origina
+
+1 Notion of Cause," 220-1 and Stobaeus, Excerpts 1.138, 14-23, who
+
+clearly attributes this wide sense of cause both to Zeno and Chrysippus. As
+Ioppolo puts it, "to say that the cause is 'that because of which' means to
+know what the thing is in its generality but without capturing its essential
+feature"; "II concetto di causa," 4526.
+
+^Stromateis 8.9.27.3, 1-3 (SVF2:347).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+in t2. Although time does not seem to fit into the more orthodox char
+acterization of cause (for it is not a body), it is the factor which allows
+us to establish a relation of causality, a relation for which the temporal
+
+component is essential for distinguishing what the cause and the ef
+fect are. Time, as incorporeal, appears to have an intermediate posi
+tion between that which is absolutely (body) and that which is nothing
+(time being a something for it is different from nothing). Regardless
+
+of time being incorporeal, we should not conclude, as Proclus does,
+that time is something purely mental and only subsistent in the mind.23
+
+The Stoics also introduced the notion of "being present" or "being
+there" (ujtaQX?LV): time, insofar as it is an incorporeal something, is
+subsistent; but according to a subtler distinction, the past and the fu
+ture only subsist (vfyeoxavai), while the present is there, that is, exists
+in some way.24 I suggest, then, that, in Stoic terms, there is no existent
+which, in order to be what it is, can exist without time.
+
+The same thing can be said about void and sayables: singular ob
+jects (the existents) cannot exist unless they are in the domain of spe
+cifically defined spatial-temporal relationships. There is a passage in
+Sextus Empiricus that might confirm, at least partially, my hypothesis
+that there must be a relationship of complementarity between bodies
+
+23 The expression "nonexistent" should be understood in two senses: (a)
+in the technical Stoic sense that something (as time or void) does not exist
+but subsist, and (b) in the common sense that something does not exist in
+any way. The confusion between (a) and (b) is probably the one that Proclus
+
+has in mind when attacking the Stoic position. I am indebted to Ricardo
+
+Salles for urging me to clarify this point.
+
+24 See Stobaeus, Excerpts 1.106, 5-23 (SVF 2:509; LS, 51B). However, ac
+
+cording to Chrysippus, no time is wholly present (enistatai). There is no
+
+present in the strict sense, although broadly it can be called such. The ex
+pression "to be present," "to be there" (hyparchein) can be properly applied
+to the present; by contrast, the past and the future merely subsist (hyphe
+
+stanai). For a very clear and persuasive discussion of this passage, see
+Frede, "The Stoic Notion of a lekton," 117-18, whose translation of hy
+
+parchein as "being present," "being there" I am following. It would be conve
+nient, it seems to me, to avoid rendering hyparchein as "to be real" (as David
+
+Sedley does in The Cambridge History of Hellenistic Philosophy, ed. Ke
+
+impe Algra, Jonathan Barnes, Jaap Mansfeld, and Malcolm Schofield [Cam
+bridge: Cambridge University Press, 1999], 398). According to Sedley, the
+
+point of Chrysippus's remark with regard to the present is "to make it a spe
+cial kind of incorporeal." That is probably true but the present is already an
+incorporeal and, as such, it is not "real," at least in the sense of something
+fully existent. Whatever the case may be, the language in the case of the in
+corporeal time is very misleading and extremely hard to render.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+731
+
+732
+
+MARCELO D. BOERI
+
+and incorporeals. In effect, he quotes25 the Stoic distinction between
+
+?^ov and jt?v, and notes that, in accordance with the Stoics, the
+world is a whole (o?,ov) whereas the external surrounding void to
+gether with the world is an all (jt?v). Clearly what is involved here is
+that the void (one of the incorporeals) does not subsist without the
+world, which is of course a body. Yet the world does not exist with
+out void. Therefore, neither the world nor the void can be what they
+
+are except in close connection. Sayables (^exT?i) also play a crucial
+role in the constitution of the real and corporeal world, for one of
+their basic functions consists in establishing the logical-linguistic rela
+tions which permit us to categorize the object, so that we can know it.
+To be sure, for the Stoics there is a crucial difference between saying
+(?iyeiv) something and uttering (jCQO^?peoBat) it: sounds are uttered
+(or "pronounced") but things or the states of affairs (x? 7iQ?y\iaxa),
+which indeed are sayables, are said (X?yeTai).26 It is obvious from this
+passage not only that for the Stoics sounds are uttered and meaning
+ful things (or simply "meanings") are said (because they are lekta) but
+also that if a corporeal thing X is something to a human, it must be
+meaningful, and X is significant if and only if it is analyzed through the
+logos.27 So sayables are clearly important in the constitution of the
+material world for a human being. A sayable, as the significant inten
+tion of the discourse (whether this is a true or false proposition, or a
+complex argument), plays a relevant role in the Stoic psychology of
+action, too. According to the evidence, the structure of the Stoic psy
+chology of action is described as having the following steps: the first
+one is the presentation (fyavxaoia), which in the case of the human
+being is expressed through articulated language. The presentation is
+
+followed by an assent (ouyxaTa08oL?) which is the act of accepting
+such a presentation as true.28 Finally, when one gives assent to the
+proposition expressing the content of a presentation, the assent be
+comes an impulse (?Q|if|) for action. This accounts for the fact that,
+as Stobaeus reports, "all the impulses are assents."29 The relevance of
+sayables can be seen more clearly when looking into the Stoic thesis
+
+25 Sextus Empiricus, Adversus Mathematicos 9.332.
+26 Diogenes Laertius 7.57 (LS, 33A; compare SVF 2:149 ).
+27 For a clear discussion of the Stoic distinction between "saying" and
+"uttering" see Catherine Atherton, The Stoics on Ambiguity (Cambridge:
+Cambridge University Press, 1993), 283-4.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+733
+
+that there is no rational action in the strict sense unless there is an in
+
+termediate process of "rational evaluation" between presentation and
+action itself. The capacity of expressing in words the contents of pre
+sentations is a typically human feature for, as Diogenes Laertius says
+
+in reporting Stoic doctrine,30 the human thought is capable of
+
+28 The sequence presentation-assent-impulse is reported by Cicero, Aca
+d?mica 2.24-5; this testimony is confirmed by Plutarch, On Stoic self-contra
+dictions 1057A (SVF 3:177; LS, 53S) and partially by Diogenes Laertius 7.49 .
+
+Seneca, for his part, offers the sequence presentation-impulse-assent (Let
+ters, 113, 18) but his evidence is isolated and does not fit into the orthodox
+explanation. However, when explaining how anger is produced Seneca ap
+pears to go back to the supposedly orthodox account. In fact, he says that
+anger (ira) is set in motion by a presentation (species) received of a wrongful
+act (iniuria), and suggests that anger does not follow immediately without
+the involvement of mind giving assent to the presentation (On anger 2.1.3).
+Seneca is probably rendering the Greek synkatathesis ("assent") with the ex
+
+pressions uaccedents animus" or ''animus adprobans" and uphantasia" with
+species. For a detailed discussion of the topic see Janine Fillion-Lahille, Le
+De ira de S?n?que et la philosophie sto?cienne des passions (Paris: Klincks
+iek, 1984), 164-6; Brad Inwood, Ethics and Human Action in Early Sto
+icism (Oxford: Clarendon Press, 1985), 42-101, and "Seneca and Psychologi
+
+cal Dualism," in Passions & Perceptions: Studies in Hellenistic Philosophy
+of Mind. Proceedings of the Fifth Symposium Hellenisticum, ed. Jacques
+
+Brunschwig and Martha Nussbaum (Cambridge: Cambridge University Press,
+
+1993), especially 164-80; Ana Maria Ioppolo, "Presentation and Assent: A
+Physical and Cognitive Problem in Early Stoicism," Classical Quarterly 40
+
+(1990): 444, and more recently, "L'?Q^if] jtXeovoi^ouoa nella dottrina stoica
+dellapassione," Elenchos, 1 (1995): especially 49-54, where she examines the
+assent in the case of the passionate person; Annas, Hellenistic Philosophy of
+Mind, 75-85; A. W. Price, Mental Conflict (London and New York: Routledge,
+1995), 146-7, 153. I agree with Richard Bett that "it is hard to accept that
+there is any sense in which impulse precedes assent." See his review of An
+nas's Hellenistic Philosophy of Mind, m. Ancient Philosophy 14 (1994): 195?
+6, where he argues against Annas's suggestion (Mind, 97-8) that the Stoics
+use the word impulse in both a broad and a narrow sense.
+29Excerpts 2.88, 1. Indeed this explanation is simplified. I do not intend
+here to engage in the complex debate of the doctrine that impulses involve
+
+assent. For an illuminating treatment of the issue see Inwood, Ethics and
+Human Action in Early Stoicism, 53-66; Ioppolo, "Presentation and As
+sent," 441-9; Troels Engberg-Pedersen, The Stoic Theory of Oikeiosis. Moral
+
+Development and Social Interaction in Early Stoic Philosophy (Aarhus:
+Aarhus University Press, 1990), 172-86; Annas, Hellenistic Philosophy of
+
+Mind, 91-102, and Pierluigi Donini, "Struttura delle passioni e del vizio e loro
+cura in Crisippo," Elenchos 2 (1995): 305-29 (on assent and impulse see par
+ticularly 319-25).
+30 Diogenes Laertius 7.49.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+734
+
+MARCELO D. BOERI
+
+expressing (?ioivoia ?xXa^r]TLxr|), and communicates with language
+that which it experiences due to the agency of presentation.31
+In all these cases the core function of a sayable seems to be both
+to articulate and to give meaning to the reality through the discourses
+in which existents are expressed or accounted for. In other words, in
+
+corporeals cannot be despised (pace Proclus) since they are neces
+sary conditions for understanding the existents. To be sure, it is
+through language, which involves a connection between thinking and
+reality, that we articulate reality in such a way that it is significant to
+
+us. The fact is that the (incorporeal) meaning of something can be
+only conveyed by words (which are corporeal); indeed, words are in
+dispensable for the expression of a sayable (namely a proposition or
+an argument). Thus words and meanings never appear separately.
+Sayables, despite being incorporeals, are somethings that enable us to
+establish the connections between ourselves and the universe, utiliz
+ing the logos through which we articulate reality.32 Incorporeals, then,
+are not placed on a level lower than bodies because we cannot fail to
+include incorporeals as part of what constitutes and accounts for the
+objective reality, that is, the corporeal reality. The Stoic standpoint
+seems to be that although incorporeals are inexistent (and therefore
+they are "unreal"), they are yet indispensable conditions that make up
+the reality of the corporeal. In this sense incorporeals occupy an in
+termediate position in Stoic ontology: because they lack body, which
+gives an objective reality to beings, they are incorporeal. However, at
+
+31 At this point I am assuming (without argument) the orthodox position
+according to which the Stoics distinguished the psychological states of non
+rational animals from those of rational animals. Salient holders of this thesis
+are Michael Frede, "Stoics and Skeptics on Clear and Distinct Impressions,"
+
+in Frede, Essays in Ancient Philosophy, 151-76 (especially 152-70); In
+wood, Ethics and Human Action in Early Stoicism, 73-5, and LS 1:239-41.
+
+For the other interpretation (that is, that the Stoics are not taken to hold that
+perceptions of animals are completely devoid of propositional contents) see
+
+Richard Sorabji, "Perceptual Content in the Stoics," Phronesis 35 (1990):
+307-14, and more recently, Animal Minds and Human Morals: The Origins
+
+of the Western Debate (London: Duckworth, 1993), 20-8.
+32 See Gerard Watson, The Stoic Theory of Knowledge (Belfast: Vincent
+Baxter Press, 1966), 42-3; for the Stoic account of the process of acquiring
+knowledge see Michael Frede, "Stoics and Skeptics on Clear and Distinct Im
+
+pressions," 157-70, and more recently, "Stoic Epistemology," in The Cam
+bridge History of Hellenistic Philosophy, ed. Keipe Algra, Jonathan Barnes,
+
+Jaap Mansfeld, and Malcom Schofield (Cambridge: Cambridge University
+
+Press, 1999), 295-322.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+735
+
+the same time they have the status of "somethings" because they are
+different from absolute nothing.
+It has been suggested in recent years that "it is apparent that in
+
+the Stoic philosophy the term Incorporeal' is a cause of embarrass
+ment and that further analysis of the question of time might increase
+their perplexity."33 The same suggestion is repeated later when Tza
+malikos says that "for Origen incorporeality and reality are not incom
+patible ontological realities, as they virtually are for the Stoics."34 As
+far as I can see, this scholar gives no arguments to prove the alleged
+
+Stoic embarrassment with regard to incorporeals and, as far as I
+know, there is no evidence that the Stoics have regarded their incor
+
+poreals as embarrassing to their ontological scheme. Tzamalikos's
+opinion may be understood once one realizes that this scholar be
+lieves that for the Stoics incorporeality and reality are incompatible
+
+ontological statuses.35 If Tzamalikos's assumption concerning the
+term incorporeal is correct (quod non), the role of incorporeals in
+physics and ethics would become inexplicable. However, from the
+distinction between a?/riov and ahta and between the adjectives
+in -Tov and -Teov (in both the spheres of physics and ethics respec
+tively) it becomes plain that incorporeals not only play a relevant role
+but also they are not incompatible ontological realities, that is to say,
+their status as incorporeal is not at odds with the "real" things. I have
+briefly quoted this interpretation of Stoic incorporeals because this
+type of explanation is paradigmatic of what I take to be misleading
+when trying to account for the relation between ?v and ?ir) ?v within
+the sphere of Stoic ontology. Tzamalikos's view on Stoic incorporeals
+is very similar to that of Proclus and, as I have said above, I cannot
+find evidence for this sort of interpretation.
+There is another piece of evidence (in the domain of Stoic dialec
+tic) which should be briefly commented on for it might be useful to
+throw light on the issue. In a well known passage Sextus suggests that
+the Stoics seem to have made an interesting connection between the
+
+discussion of the problem of truth and ethics.36 Sextus says that,
+33 Panayiotis Tzamalikos, "Origen and the Stoic View of Time," Journal
+of the History of Ideas 52, no. 4 (1991): 540.
+^Tzamalikos, "Origen and the Stoic View of Time," 553.
+35 The issue of Stoic "embarrassment" is repeated again later (see "Ori
+gen and the Stoic View of Time," 554).
+
+MPyrrhoneae Hypotyposes 2.81-3 (SVF 2:132; LS, 33P); see also Sextus
+Empiricus, Adversus Mathematicos 7.38-45.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+736
+
+MARCELO D. BOERI
+
+according to the Dogmatists (that is to say, those who systematically
+maintain positive theses on different topics),37 the true (akr\Q??;) is dif
+ferent from the truth (??T|6?ia) in three ways: in substance (ouoia), in
+
+constitution (ovox?oei), and in function (ouv??iei). The Stoics con
+sidered that the true in substance is an incorporeal (ovoia ?lev, eitei t?
+?lev cd?iG?? ?o(b[iaxov ?oTiv) because it is a predicate taking part in a
+
+discourse (it is a sayable). The true, understood in terms of a prop
+erty of the proposition, turns out to be an "incorporeal quality" per
+taining to the genus of lekta, but the truth is a body (namely, some
+thing corporeal) since it is knowledge declaratory of all true things,38
+and knowledge is conceived of as the commanding part of the soul in
+
+a certain condition, the commanding part being a body (for it is
+breath, pne?ma, in a certain state). In constitution the true differs
+from the truth since the true is something simple (like "I am talking"),
+and the truth consists of the knowledge of many true things. Finally,
+in function the true differs from the truth since the latter always exists
+
+within the sphere of knowledge and, therefore, it just belongs to the
+
+virtuous person. The true can also exist in the base person, since
+such a person can say something true but the truth is related to the
+mental disposition proper of the wise person and such a mental dispo
+
+sition (that is, knowledge understood in terms of the commanding
+part of the soul disposed in a certain way) is a body. In this case it is
+also clear enough that for the Stoics the true/truth distinction involves
+
+a concern which is not only epistemological but also ethical. The
+mentioned distinction implies crucial connotations in the field of eth
+ics and it is helpful to understand the rigid Stoic differentiation be
+tween the wise and the base person: to account for the epistemic state
+
+proper to the wise person ("knowledge"; episteme) and that to the
+base or "inferior" person ("opinion"; doxa) one has, once more, to pre
+suppose incorporeals as well as corporeal somethings.39
+As indicated above, in order to speak of a body or of a series of
+bodies related by order of occurrence, we must always posit certain
+
+temporal, locative, and linguistic determinations and, in general
+terms, a number of factors connected with what the Stoics used to
+37 In this passage the Dogmatists Sextus is referring to are the Stoics.
+
+^Sextus, Pyrrhoneae Hypotyposes 2.81: "x\ ?? ??,f|6eia o(b\ia eoxi yap
+
+8JtLOTf||ir] jt?vTcov ??,r|0u)v ?jto(j)avTLxr|."
+
+39 For a complete discussion of the distinction at issue see Long, "Lan
+guage and Thought in Stoicism," 98-104.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+737
+
+call "the incorporeal." On this ground it is possible to argue that be
+tween bodies and incorporeals there is a relation of reciprocal depen
+dence. This proposal, it seems to me, helps to clarify at least two
+points: first, the reason why the Stoics think it is necessary to include
+incorporeal things in a strongly corporealistic ontology. Second, this
+interpretation may help us to understand why the Stoics did not talk
+
+about incorporeals as "ways of not being in an absolute sense," as Plu
+tarch misleadingly suggests. In fact, in Plutarch's opinion, "it is absurd
+and at odds with the common conception to say that something is but
+
+is non-existent"?*
+
+It is obvious here that Plutarch is putting emphasis on the Pla
+tonic doctrine of \ir\ ?v in the sense of "an absolute non-being."41 But
+this way of interpreting the issue, I contend, would not have been ac
+
+cepted by the Stoics. The absolute not being (like evvor|?iaTa, for in
+
+stance) would be a nothing, not an incorporeal.42 Concepts
+
+(?vvor|(iaTa) and ideas (i??ai) are figments ((j)avT?o^iaTa) of the soul
+that neither subsist (a distinctive feature of the incorporeal) nor are
+somethings.43 Despite Plutarch's view, and as far as I can see, there is
+no evidence to suggest that the early Stoics have maintained that in
+corporeals are "not beings," that is to say ways of not being in an abso
+lute manner. What seems to be suggested in Stoic sources is that in
+corporeals "are not" or they "are nonexistent" in the sense that they
+are not bodies. However, the fact of not being a body does not imply
+not being absolutely.
+40 See On common conceptions 1073D (Harold Cherniss's translation,
+Plutarch's Moralia). Indeed Plutarch's remark is in agreement with the con
+fusion (noted above, note 23) on the two senses of "nonexistent."
+41 See Plato, Sophist 258d-259b.
+42 See Alexander (reporting Stoic doctrine), On Aristotle's Topics 359,
+14-16 (SVF2:329; LS, 30D: " ei ye to ^l?v ev xai xaTa toD ?wor|^aTo?- to ?? t?
+
+xar? (i?vcov ooo^i?tcov xai ?acDji?TO?v xb ?? evv?rjjua jurj??regov rovr v
+nax? xov? Ta?Ta X?yovTa?)."
+43 Actually, the Stoics are assumed to have said that concepts are "quasi
+
+somethings" (oboavei Tiva; Stobaeus, Excerpts 1.136, 2-23 ( SVF 1:65). See
+
+also Simplicius, On Aristotle's Categories 105, 8-21 (compare SVF 2:278) and
+Frede, "Principles of Stoic Grammar," in The Stoics, ed. John M. Rist (Berke
+ley and Los Angeles: University of California Press, 1978), 32. Certainly the
+issue of concepts in Stoic philosophy is highly controversial. For a compre
+
+hensive discussion of the topic see Brunschwig, Papers in Hellenistic Phi
+
+losophy, 99-104, and Victor Caston, "Something and Nothing: The Stoics on
+Concepts and Universals," Oxford Studies in Ancient Philosophy 17 (1999):
+145-213 (especially 150-71).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+738
+
+MARCELO D. BOERI
+
+III
+This section will concentrate on some specific Stoic texts that
+show the way incorporeals work in the different parts of philosophi
+cal discourse. Thus I shall be examining some key passages in which
+
+bodies and incorporeals display the character of complementary
+terms. First, my discussion will focus on Stoic physics. I shall begin
+by considering the presumably44 Stoic distinction between a?/riov
+("cause" or "cause in the strict sense") and ama ("causal account")
+and offer an interpretation that makes consistent that distinction with
+a theory of causality, according to which the bodies alone are capable
+
+of bringing about something or other on another bodily thing.45 Sec
+ond, I intend to explore the meaning of two important distinctions in
+the domain of Stoic ethics: "being happy" (an incorporeal) and "happi
+
+ness" (a body), on the one hand, and the adjectives with the verbal
+suffix -tov and those with the verbal suffix -Teov, on the other hand.
+
+The issue has been debated at length and scholars do not agree on the
+true meaning of these distinctions.46 The main passages on this point
+are collected in the summary of Stoic ethics by Stobaeus, who is gen
+erally thought to be quoting Arius Didymus' ethical doctrines.47 In this
+context we will also refer to the topic of impulse and assent and will
+
+see how incorporeals work in the Stoic account of impulse, the im
+pulse being that which goes intentionally toward what each one takes
+to be good. Following the intended line of argument, for each of the
+
+passages under consideration I shall endeavor to show the relevance
+of the corporeal/incorporeal distinction in the explanation as a whole,
+and offer some brief conclusions.
+
+44 The sense of the adverb "presumably" is explained below in note 53.
+45 In my judgment, by far the best discussion on the Stoic notion of cau
+
+sality continues to be Frede's; see "The Original Notion of Cause." A good
+
+abstract of the topic can be found in Jean J. Duhot, La conception sto?cienne
+
+de la causalit? (Paris: Libraire Philosophique J. Brin, 1989), 87-100. See also
+the penetrating and more philosophical remarks by Maximilian Forschner,
+
+Die stoische Ethik. ?ber den Zusammenhang von Natur-, Sprach- und
+
+Moralphilosophie im altstoischen System (Die stoische) (Darmstadt: Klett
+Cotta Verlag, 1995), 85-97, and Ioppolo, "II concetto di causa," 4494-523.
+
+46 See LS 1:400; Engberg-Pedersen, The Stoic Theory of Oikeiosis, 25
+
+35; and Annas, The Morality of Happiness (Oxford: Oxford University Press,
+1993), 34, 396-7, and 401.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+739
+
+The issue that is not under dispute in our sources is that, for the
+Stoics, the truly existent things are bodies.48 Zeno maintained that the
+principles of all things are the active and the passive, and in saying this
+he implies that all that is existent is either active or passive. This also
+47 The authorship of Stobaeus' extract of Stoic ethics has been widely
+discussed; it was attributed to the first century Stoic philosopher Arius Didy
+mus by August Meineke, "Zu Stobaeus," Sokrates: Zeitschrift f?r das Gym
+
+nasialwesen, 13, ed. Julius M?tzell, Band 1 (Berlin, 1859), 563-65, and Her
+man Diels, Doxographi Graeci (Berlin: G. Reimer, 1879), 69 and 78-88. One
+of the first scholars in the last decades in questioning some assumptions of
+the Meineke-Diels thesis was Michelangelo Giusta, / dossografi di etica, 2
+vols. (Turin: G. Giappichelli Editore, 1964-7), 1:140-7, and "Ario Didimo e la
+diairesis dell'etica di Eudoro di Alessandria," in Atti delta Accademia delle
+
+scienze di Torino. Classe di scienze morali, storiche e filologiche 120
+
+(1986): 102-3, although he keeps the hypothesis that one author was respon
+sible for the three doxographies (I dossografi di etica 1:39). In recent times
+
+the Meineke-Diels hypothesis was accepted (with some reservations) by
+
+Charles Kahn, "Arius as a Doxographer," and Anthony A. Long, "Arius Didy
+
+mus and the Exposition of Stoic Ethics," both papers included in On Stoic
+
+and Peripatetic Ethics: The Work of Arius Didymus, ed. William W. Forten
+baugh (New Brunswick and London: Transaction Books, 1983), 3-13 and 41
+65, respectively. David E. Hahm, on his part, after a detailed examination of
+the works by Meineke, Diels, Giusta, and other scholars has also concluded
+that the author is the court philosopher Arius Didymus. See his "The Ethical
+Doxography of Arius Didymus," in Aufstieg und Niedergang der r?mischen
+Welt, ed. Wolfgang Haase (Berlin and New York: Walter de Gruyter, 1990), es
+pecially 3047-9. Tryggve G?ransson, however, has challenged the orthodox
+interpretation and has argued vigorously against the identification of the au
+thor in Stobaeus with the Alexandrian philosopher Arius Didymus. See Albi
+
+nus, Alcinous, Arius Didymus (G?teborg: Acta Universitatis Gothoburgen
+sis, 1995), 203-4, 209-10, 212-13, 216, 225-6, and 230-1. For a well-balanced
+defense of the orthodox view see Brad Inwood, review of G?ransson, Bryn
+
+Mawr Classical Review 7 (1996): 25-30. I have presented a brief review of
+the status quaestionis concerning Arius Didymus in the introduction to my
+Spanish translation of the extract of Stoic ethics included in Stobaeus; see
+Victoria Julia, Marcelo D. Boeri, and Laura Corso, Las exposiciones antiguas
+
+de ?tica estoica (Buenos Aires: Editorial Universitaria de Buenos Aires,
+
+1998), 149-67. At any rate, whether the author of the extract is Arius Didy
+mus or another person, what is beyond discussion is the fact that the content
+
+of the second extract of ethical doxographies in Stobaeus 2.7 is genuinely
+Stoic doctrine. The crucial passages in Stobaeus can be confirmed in Dio
+genes Laertius 7.84-131 and Cicero, On Ends 3. This conclusion looks naive
+
+and, in a certain sense, it is. Yet it also allows us to regard the doxography in
+
+cluded in Stobaeus, Excerpts 2.7 as a serious Stoic piece of evidence which
+informs us about details that are not developed in the other sources. Such
+
+details are crucial for the reconstruction of the early Stoic ethics.
+
+^Plotinus, Ennead 6.1, 28; 2.4, 1 (SVF 2:319-20); Alexander of Aphrodi
+sias, On Aristotle's Topics 301, 19-21 (SVF 2:329).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+740
+
+MARCELO D. BOERI
+
+appears to be suggesting that anything which does not have these
+characteristics must necessarily be nonexistent.49 The existent/non
+existent difference can be clearly seen in the theory of causality,
+where a strict terminological distinction of the words meaning
+"cause" is noted. In Plato and Aristotle the Greek terms ama and
+a?TLOv were used indistinctly.50 However, according to Stobaeus' tes
+timony, Chrysippus asserted that aitia is the formula, an enunciation
+
+or account (k?yoc) of a cause (a?/ciov).51 In other words, we are told
+that an arr?a is a propositional item which is related to that which,
+strictly speaking, is a cause: a body. An a?Tta is not a cause in the
+strict sense because of being a propositional item; and if it is a propo
+sitional item it will be an incorporeal. In fact, a proposition is an in
+corporeal. However, according to the orthodox doctrine nothing in
+corporeal can be a cause.
+It is true that Stobaeus' passage is quite brief and gives no details
+of what the aitia/aition distinction probably meant. Jaap Mansfeld
+rejects the relevance of this distinction on the ground that in some
+passages52 aitia is given as one of the names used by Chrysippus for
+fate (8L|iaQ|i?vTi), others being a^f|6eia, cleric, and av?yxr].53 In a pas
+sage where Galen is reporting doctrines supposedly Stoic,54 Mansfeld
+goes on to argue, aitia and aition are used promiscuously and in a
+passage of Plutarch's,55 an alleged (although not necessarily) verbatim
+quotation of Chrysippus, the term aitia appears twice (and not mean
+ing ?xSyo? Tfj? aiTia?). To sum up, according to Mansfeld, the words
+aitia/aition are indistinctly used. At first glance Mansfeld's remarks
+seem to be persuasive; but at any rate, the following should be noted.
+First, Galen's text is a very hostile passage where he is trying to show
+the absurdity of the Stoic thesis of synectic cause (ouvexTixov a?/tiov;
+?uvexTLxri ama); if this is so, we cannot assume that what he is saying
+is what the Stoics effectively intended to say. To be sure, in the Ga
+lenic passage there is no difference between aitia and aition, and Ga
+
+len uses both terms as meaning the same thing, but the fact that he
+does not take the distinction for granted is not very significant be
+
+cause he does not accept the sort of causation he is criticizing (the
+49 Diogenes Laertius 7.134 ( SVF 1:85); Aetius 1.3, 25 ( SVF 1:85).
+50 Timaeus 28a4-5; Philebus 26e; for Aristotle, see Physics 2.3.
+51 See Stobaeus, Excerpts 1.138, 23-139, 4 ( SVF 2:336; compare LS, 55A).
+52 Stobaeus, Excerpts 1.79, 1-20 ( SVF 2:913; see LS, 55M).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+synectic cause), either. Second, there is another place where Galen
+tells us that there is clearly no difference between saying the word
+"cause" either in feminine or in masculine gender.56 Actually, what
+Galen implies is that he uses both terms interchangeably, not that the
+Stoics use them in this way. Whatever the case may be, Galen gives no
+clear reasons for proving the distinction is pointless. In Stobaeus' text
+then, and pace Mansfeld, the distinction is explicitly made and the fact
+
+that in other passages the words ama-amov are employed in the
+53 See Mansfeld, "Zeno of Citium," 157. Frede ("The Original Notion of
+Cause," 223) accepts the distinction as Stoic and holds that although the dif
+ference between aition and aitia (that is to say, causes, on the one hand, and
+reasons and accounts, on the other hand) was not generally accepted, the dis
+
+tinction itself between causes and reasons or explanations was accepted.
+
+Forschner, on his part, does find this distinction "interesting" and he thinks it
+
+presumably is valid (Die stoische, 87). More recently, and following Mans
+feld, Ioppolo has maintained that Chrysippus does not have a rigorous techni
+
+cal use of both terms ("II concetto di causa," 4497-8). This suggestion, it
+seems to me, is conjectural, and as far as I can see has no textual support. On
+the other hand, we have a passage where the distinction is explicitly attrib
+
+uted to Chrysippus (see Stobaeus, Excerpts 1.139, 3-4). Bobzein, on the
+
+ground of Aetius 1.11.5 (SVF 2:340; LS, 55G), asserts that "the aitia of any in
+
+dividual cause (aition) is the portion of rational pneuma which permeates
+
+that cause," and so she also appears to dismiss the distinction between aitia
+and aition. In fact, she notes that such a distinction seems lost in this pas
+
+sage. See Susanne Bobzein, Determinism and Freedom in Stoic Philosophy
+
+(New York: Oxford University Press, 1998), 53 n. 96. In her translation of the
+Stobaeus passage at issue (Excerpts 1.139, 3-4) she renders the word A,?yoc
+as "reason" and in doing so, the distinction vanishes (see 53 n. 97). Certainly
+"reason" is a possible rendering of logos; this translation is also adopted by
+Roberto Radice in his recent Italian translation of the Stoic texts (compiled
+by von Arnim in SVF), Stoici Antichi. Tutti I Frammenti (Milano: Rusconi,
+1998), 513. In my view, in order for the Stobaeus passage to make sense,
+logos is to be taken as meaning "formula," "enunciation." See LS, 55A (who
+
+give "judgement") and Karlheinz H?lser, Die Fragmente zur Dialektik der
+Stoiker. Neue Sammlung der Texte mit deutscher ?bersetzung und Kom
+
+mentaren, Bans 2 (Stuttgart: Bad Cannstatt, 1987), 899, text 762 (who renders
+"die Rede"). In what follows I try to offer an explanation for why the evi
+dence, on which the interpretation that Chrysippus did not distinguish accu
+rately between aitia and aition is based, is not absolutely reliable.
+
+54 Galen, On bodily mass 7:26-8, in Claudii Galeni Opera Omnia, ed.
+Gottlob K?hn (Berlin: Gnobloch, 1821-33; reprint, Olms: Heldesheim, 1964
+5), (SVF 2:440).
+55Plutarch, On Stoic self-contradictions 1055F-1056A (SVF2:994).
+56 Synopsis of the books on pulse 9:458, in Claudii Galeni Opera Om
+nia, ed. Gottlob K?hn (Berlin: Gnobloch, 1821-33; reprint, Olms: Heldesheim,
+
+1964-5): "Ei?r]^ov ?' ?tl ?ia(|)?Qei ^ir|??v f] Or^ux??c eijre?v atTia?, f\
+oi)?8T8QO)? ama."
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+741
+
+742
+
+MARCELO D. BOERI
+
+same way does not account for the distinction which Stobaeus explic
+itly attributes to Chrysippus. It is not impossible that, depending on
+the context, Chrysippus would have made wider use of the two terms.
+Perhaps this distinction might be a peculiar technical usage which, al
+though it could be acknowledged by authors like Plutarch and Galen
+(cited by Mansfeld), should not be necessarily admitted. I would sug
+gest that while making this distinction Chrysippus was thinking of
+something like this: when you say "the sun warms the stone," you are
+uttering the "causal account," the propositional item describing the
+fact or event caused by the aition and, eventually, the truth of the
+proposition describing such fact or event. Such a causal account does
+
+describe the phenomenon of temperature's increasing which acts
+upon the stone, and the increased temperature is produced as a result
+of the sun's caloric energy, but the cause in the strict sense (ot?/riov) is
+
+the sun (a body) acting upon the stone (another body).57 The cause
+(the sun) and the caused object (the stone) are bodies; on its part the
+effect ("being hot") is, as the orthodox Stoic doctrine on causality re
+
+quires, an incorporeal. Thus the sun (a body) becomes the cause to
+the stone (another body) of the incorporeal predicate "being hot."58
+But if this is so (as it is), the effect is a predicate, an incorporeal. If
+the effect is a predicate, the difficulty of how to analyze the causal
+processes whose result is the production of new entities arises. Such
+a difficulty probably led some Stoics to think that the effect is a predi
+
+cate as well as an entire proposition such as "a ship is built." Such a
+proposition becomes true as a result of the shipbuilder's activity.59
+One could wonder why a distinction between cause (a body) and
+
+causal account (an incorporeal) should be put forward in a strongly
+57 The example of the sun is taken from Sextus, Pyrrhoneae Hypoty
+poses 3.14, who probably has the Stoics in mind in writing: "the sun or the
+heat of the sun is cause of the wax melting or of the melting of the wax";
+translation by Julia Annas and Jonathan Barnes, Sextus Empiricus: Outlines
+of Scepticism (Cambridge: Cambridge University Press, 1994).
+58 The other example, also collected by Sextus, is that of the scalpel: a
+scalpel (which is a body) is a cause to the flesh (another body) of the incor
+
+poreal predicate "being cut." See Sextus, Adversus Mathematicos 9.207-11
+and Pyrrhoneae Hypotyposes, 3.14, with Jonathan Barnes's remarks in his
+"Pyrrhonism, Belief and Causation," in Aufstieg und Niedergang der r?mis
+chen Welt (Berlin and New York: Walter de Gruyter, 1990), 2671-2.
+
+59 See Clement, Stromateis 8.9, 26, 3-4, and the commentary by LS
+1:340.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+743
+
+corporealistic ontology like the Stoic one. I would offer for consider
+ation the following conjecture: according to the basic Stoic ontologi
+cal classification, the first and highest genus is "the something" (to t?),
+
+in which bodies and incorporeals are included.60 If my approach?
+that bodies and incorporeals are necessary components of reality and
+that between them there is no one component more important than
+the other?is correct, one might draw the conclusion that incorpore
+als should somehow play a role even in the sphere of the doctrine of
+
+causation. The causal account (ama), despite not being a cause in
+the strict sense, is relevant for the whole causal account insofar as it is
+
+the means through which a determined causal event can be expressed
+
+by language, and thus through which the object can be grasped. On
+the other hand, it should be noted that the cause/effect relationship is
+closely related to the process of knowledge. For the human being the
+first contact with the world is through the senses; they offer the mate
+rial aspect of knowledge. Although the soul (or rather "the command
+ing part of the soul"; t? f|y8^iovix?v) is like a sheet of paper ready for
+
+writing upon,61 there are "ingrained or implanted preconceptions"
+(jtQO^f|^8L? 8?ii(J)UTOi) as well,62 which are natural rational components
+whose function is to determine and to help interpret the stuff provided
+by the senses. According to Diogenes Laertius' report, for the Stoics a
+
+preconception is a "natural conception of the universal things" (or
+simply "universals"; evvoia cj)U?ixfi x(hv xaB?Axnj).63 The function of
+preconceptions in the Stoic theory of knowledge seems to have been
+searching for and finding out a new knowledge.64 Possessing the
+60 Compare Alexander, On Aristotle's Topics 301, 19-25 ( SVF 2:329; LS,
+
+27B) and Sextus Empiricus, Adversus Mathematicos 10.218 (SVF 2:331; LS,
+
+27D).
+
+60B).
+
+61 Aetius 4.11 (SVF2:83; LS, 39E).
+62 Plutarch, On Stoic self-contradictions 1041E ( SVF 3:69; compare LS,
+
+63 See Diogenes Laertius 7.54. Sometimes Chrysippus is said to have
+
+held that prolepsis is, along with aisthesis, the criterion of truth. The issue is
+quite complicated and I do not intend to discuss it here. For a very detailed
+
+and clarifying account see Gisela Striker, Essays in Hellenistic Epistemol
+
+ogy and Ethics (Cambridge: Cambridge University Press, 1996), 22-76 (see
+
+especially 57-68).
+^Clement, Stromateis 6.15, 121, 4-5 (SVF 2:102); Cicero, Acad?mica,
+2.26 (SVF 2:103); Plutarch, On Stoic self-contradictions 1037B (SVF 2:129;
+LS, 31P).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+744
+
+MARCELO D. BOERI
+
+general notion of the distinctive characteristics of an object allows us
+
+to search for a more accurate knowledge of such an object. Human
+reason is completed from our preconceptions during our first seven
+years of life. With the full development of reason65 the ability to dis
+
+criminate in conceptual terms and the relation among things is
+stressed, and this relation can be expressed more accurately. The
+cause/effect relationship is not left out of this process: if we want to
+have a full understanding of the causal relationship, we are to make
+the aition/aitia distinction, so that the true causal agent can be dis
+tinguished from the causal formula that makes intelligible a particular
+phenomenon by the agency of the articulated language. Moreover, as
+indicated above, in the Stoic account of causality the effect is a predi
+cate, a sayable. Thus predicates are closely involved in the causal ex
+planation of a bodily entity; in this sense, we should accept that say
+ables (one of the canonical incorporeals) are quite "real" and they do
+not depend on the human mind for their subsistence.66 In sum, both
+
+aspects, the logical/linguistic and the strictly causal one, are indis
+pensable for accounting for anything which can be explained in terms
+such as "A is the cause to B" or "between A and B there is a causal re
+
+lationship."
+As we have already said, in the sphere of Stoic ethics the corpo
+real/incorporeal discrimination also appears, and in this domain it is
+highly relevant as well. In this context the Stoic thesis that the truly
+real is corporeal also played a distinctive role. In the Stoic sources we
+find the following argument: if quality is "matter disposed in a certain
+way" (as, according to the Stoics, it is)67 and if the substance of a thing
+
+can be compared to the material constituent of an object (and the
+qualities of things must be themselves corporeal), the different states
+of the soul (namely virtues, passions, impulses, assents, and so forth)
+are to be corporeal, too.68 Virtue is the soul (or, more accurately, its
+commanding part) disposed in a certain way. Once the material char
+65 When the person is fourteen; see Diogenes Laertius 7.55-6 (LS, 33H);
+Stobaeus, Excerpts 1.48.8, p. 317, 21-4 (SVF 1:149).
+66 See Dorothea Frede, "Fatalism and Future Truth," in Proceedings of
+the Boston Area Colloquium in Ancient Philosophy, ed. John J. Cleary and
+Daniel C Shartin, vol. 6 (Lanham, Md.: University Press of America, 1990),
+
+213-15.
+67 See Plotinus, Ennead 6.1, 29; Plutarch, On common conceptions
+1085E.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+745
+
+acter of the soul has been shown, it follows that the affective states of
+
+the soul must be so, too. In fact, the states pertaining to the realm of
+
+emotions or feelings (such as shame and fear) become evident in
+one's face.69 Since there is neither action nor change that can take
+place without contact, states of the soul, as well as the body, have to
+be capable of acting or of being acted upon. Soul, then, shares its af
+fections with the body. This picture largely describes the Stoic corpo
+
+realism, but even in Stoic ethics the corporeal/incorporeal relation
+was significant.
+According to Stobaeus' evidence, Chrysippus and his followers
+held happiness (8i)oai?iov?a) to be a goal or a target (oxojto?), while
+the end (T8?,o?) is attaining happiness (tu)(8lv euoai^ioviac), which ac
+tually is the same as being happy (8?oai?iov8?v).70 Like Aristotle, the
+Stoics used to hold that there was an end ("an ultimate object of de
+sire") for the sake of which the other things should be done, that is,
+being happy. As a matter of fact, according to the Stoics just being
+happy is the end (telos), for they take happiness and being happy to be
+two different things. Unlike Aristotle, who had used telos and skopos
+
+interchangeably to make reference to the end,71 the Stoics distin
+guished two kinds of finality.72 Attaining happiness is the end, the
+68 For evidence see Plutarch, On common conceptions 1084A; Seneca,
+
+Letters 102, 2-7; 113, 7-11. See also Plutarch, On Stoic self-contradictions
+1042E-1043A, where the thesis that goods are perceptible is explicitly attrib
+uted to Chrysippus.
+^Nemesius, On the nature of man, chap. 2, p. 21, 6-9, reporting a Stoic
+
+doctrine.
+
+70 Stobaeus, Excerpts 2.77, 1-5; 25-7 (see LS, 63A); see also Sextus Em
+piricus, Adversus Mathematicos 11.30, and Diogenes Laertius 7.88 (LS, 59J).
+71 Politics 7.13.1331b30-4. Note that in 1331b31 ("For sometimes the
+goal is rightly proposed [o ji?v oxojz?? exxeirai xa^oo?] but in practice men
+fail to attain it") the language is the same as we find in the Stobaeus Stoic ex
+
+tract (Excerpts 2.77, 25: "happiness is proposed as the goal"; xr\v \itv
+
+Evbai\ioviav oxojt?v ?xxeioOai), but in Aristotle's case there seems to be no
+difference between skopos and telos. See also Rhetoric 1.5.1360b4-7.
+72 See Stobaeus, Excerpts 2.77, 1-5 and Damianos Tsekourakis, Studies
+in the Terminology of Early Stoic Ethics (Wiesbaden: Franz Steiner Verlag
+GMBH, 1974), 107-8. Galen, an extremely hostile critic of the Stoics, none
+theless accepts the Stoic distinction between goal and end. The goal of med
+icine, Galen says, is health; its end is having health (see De sectis 1, Scripta
+
+Minora 3,1, quoted by Tsekourakis, Studies in the Terminology of Early
+Stoic Ethics, 108).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+746
+
+MARCELO D. BOERI
+
+effective achievement of happiness, possessing happiness in the sense
+of fully having it. Attaining happiness is the end in terms of our over
+all telos, "that for the sake of which everything is done but which itself
+
+is done for the sake of nothing," "the ultimate object of desire (to
+eoxaTov T(bv ?Q8XT(ov), that to which everything else is referred."73
+
+Each one is concerned not actually with happiness as a goal (skopos)
+but with happiness in the sense of the effective achievement (telos).
+
+We are happy just when we have effectively reached happiness. On
+the other hand, happiness understood in terms of a goal (skopos) can
+
+be regarded as an object external to the virtuous activity; it is the
+body set forth or proposed which the human beings aim to attain, that
+which I should pursue as an agent to be really happy.74 But the end as
+the virtuous activity itself is the achievement of the intended goal; ac
+tually it is the ultimate object of desire, to which all the others are re
+ferred.75 According to the Stoics, then, we aim at being happy, not at
+happiness, which is our immediate goal.76
+As is obvious, the distinction underlying the difference between
+
+goal and end is the ontological distinction between corporeal and in
+corporeal. While a skopos (expressed by a noun: "happiness") is a
+body, a telos (expressed by a verb or, in the Stoic jargon, by a predi
+cate: "being happy") is an incorporeal. The expressions "living" (t,f\v)
+and "being happy" (eu?ai^iove?v) used in Stoic definitions of end (te
+los) were considered predicates. This can be verified by considering
+some Stoic passages,77 and is confirmed by the Stoic thesis that the
+
+73Stobaeus, Excerpts 2.77, 16-17 (SVF3:16; LS, 63A); 76, 22-3.
+74 Stobaeus, Excerpts 2.77, 1-3.
+75Stobaues, Excerpts 2.76, 22-3.
+76 In Adversus Mathematicos 2.61-2 Sextus reports that a certain Alisto,
+
+"friend of Critolaus," maintains that "persuasion is set up or proposed
+
+(exxeloOca) as the goal (oxojto?) of rhetoric, whereas its end (T8?,o?) is the
+attainment of persuasion" (t? ruxetv ttj? jt8i6oi5?). See Stobaeus, Excerpts
+2.77, 25-7 (SVF 3:16; LS, 643A), where the same language is used in distin
+guishing between happiness (the goal) and the attainment of happiness (the
+end). Certainly this Aristo is not the Stoic Aristo of Chios (the terminology is
+too technical for him and presupposes a theory of predication first attested
+for Chrysippus). The evidence is not certain enough for assuming that this
+
+Aristo is the Peripatetic philosopher Aristo of Ceos, either. Perhaps the
+
+Aristo mentioned by Sextus is a third one, maybe a student or colleague of
+Critolaus in the Lyceum around 150 B.C. (I am grateful to Stephen A. White
+for this suggestion).
+^Stobaeus, Excerpts 2.78, 7-11; 2.86, 5-7; 2.97, 15-98, 6.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+747
+
+end consists in "living according to virtue" or in "living consistently."78
+In both cases the end in the strict sense turns out to be a predicate, an
+incorporeal, not the thing itself but the agent's attaining the thing. The
+
+goal can be set up before the agent, but in practice he can fail to
+achieve it; so the agent is not happy unless he or really attains the end.
+The goal's being set up before one does not suffice for being happy.
+This is a good case against the purely nominalist interpretation which
+holds that Stoic incorporeals are inferior realities, since in the Stoic
+
+account the last object of desire is a predicate, an incorporeal some
+thing, not a corporeal one.
+The second point to be discussed here is related to the Stoic dis
+tinction between the verbal adjectives -tov and -T80v (such as cxIq8T?v
+and alQ8T8ov). It is true that in none of the extant fragments which
+have come down to us and are commonly attributed to the first gener
+
+ation of leading Stoics (Zeno, Cleanthes, and Chrysippus) does the
+contrast between the verbal adjectives -tos and -teos explicitly occur.79
+
+However, such a contrast is frequently presupposed in the Stoic ac
+counts of the psychology of action and is closely connected with the
+already mentioned distinction between skopos (a body) and telos (an
+incorporeal). As a matter of fact, in the Stoic canonical definition of
+end attributed to Zeno, Cleanthes, and Chrysippus, such a distinction
+is explicitly referred to and sometimes it is taken for granted. So I
+shall take the mentioned distinction as belonging to the older Stoics.80
+
+104.
+
+78Stobaeus, Excerpts 2. 77, 18-19 (SVF3:16; LS, 63A).
+79 See Tsekourakis, Studies in the Terminology of Early Stoic Ethics,
+
+80 Stobaeus, Excerpts, 2.77, 16-27 (SVF3:19; LS, 63A). Certainly the evi
+dence is controversial: according to Galen, Chrysippus thinks that terms such
+
+as "to be chosen" (haireteon), "to be done" (poieteon), "to face with confi
+
+dence" (tarreteon), and "good" (agathon) refer to something different (Ga
+len, On the Doctrines of Hippocrates and Plato 7.2. p. 436, 30-3, in Galen on
+the Doctrines of Hippocrates and Plato, 3 vols., edited, translated, and com
+mentary by Phillip De Lacy [Berlin: Akademie Verlag, 1978-84]). Later (7.2, p.
+438, 5-6, ed. De Lacy) Galen says that, in accordance with Chrysippus, only
+
+the good itself (to ?yaO?v out?) is to be chosen (aiQ8Tsov), and done
+
+(jtOLT]T8ov), and faced with confidence (OaQQryr?ov). Plutarch, on his part, at
+tributes to Chrysippus the thesis that "the good is choiceworthy" (TayaO?v
+a?QEx?v), which seems to fit into the doctrine we find in Stobaeus, Excerpts
+2.97, 15-98, 6. What is uncontroversial is the fact that for the older Stoics "to
+be happy" is a predicate (not a body) since it consists in "living according to
+virtue" or "living consistently," which is the same as "living in accordance
+with nature" (see the first reference to Stobaeus cited at beginning of this
+
+note).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+748
+
+MARCELO D. BOERI
+
+In what follows some of the most representative passages (included
+in Stobaeus' excerpt of Stoic ethics) are fully quoted; then, a brief
+commentary is offered to show the body/incorporeal thesis at work.
+1. They say that what is worth being chosen (a?QST?v) and what should
+be chosen (aigeTeov) are different. What is worth being chosen is every
+
+<good>, while what should be chosen is every beneficial act
+
+( ^?Xr\\ia), which is considered in relation to having the good. This is
+why we choose what should be chosen; for instance, "acting prudently",
+
+which is considered in relation to having prudence. But we do not
+choose what is worth being chosen, but if in effect <we do it>, we
+choose to have it.81
+
+2. Among the correct acts (xaTOQ0o)^aTa), some are included in what
+is necessary <to do>; others are not included.82 Among what is neces
+sary are the beneficial acts, which are predicates, such as "acting pru
+
+dently and with moderation."83
+
+3. They say that just as what is worth being chosen and what should be
+chosen differ, so too what is worth being desired and what should be
+desired, what is worth being wished and what should be wished, what is
+worth being accepted and what should be accepted differ as well. For
+goods are what is worth being chosen, wished, desired <and accepted,
+whereas benefits are those things which should be chosen, wished, de
+sired> and accepted, since they are predicates, which lie alongside the
+goods. For we choose things that should be chosen and wish for things
+that should be wished, and desire things that should be desired. Cer
+tainly, choices, desires and wishes are included among predicates, such
+as are impulses, too. By contrast, we choose, wish and similarly desire
+having goods; this is why goods are not only what is worth being chosen
+
+and wished but also are what is worth being desired. For we choose
+
+having prudence and moderation, (tt]v y?g ?Q?vr\Giv a?Qoi3^i80a ?x?LV
+xai xr\v oa)(()Qooi)vr]v) but not acting with prudence and moderation
+(ov ?l? A?a t? (|)qov8lv xai OQKJ)QOve?v), which are incorporeal, that is to
+say predicates.84
+
+These three passages are closely linked from a thematic point of
+view. They are also a good example of the three parts of philosophi
+
+cal discourse at work. Although one can assume that the main sub
+ject of these texts is ethical (due to the fact that they are within an al
+
+legedly ethical context), there are crucial elements of Stoic physics
+and logic, too. In fact, the Stoic thesis that the truly real are bodies
+
+tory.
+
+81 Stobaeus, Excerpts 2.78, 7-11.
+82 That is to say, some acts are mandatory and other acts are not manda
+
+^Stobaeus, Excerpts 2.86, 5-7.
+^Stobaeus, Excerpts 2.97, 15-98, 6 (SVF3.19; LS, 33J).
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+
+749
+
+and the doctrine of lekta is present here. If one did not take these
+points into account, this piece of evidence would be difficult to inter
+pret. The evidence is indeed hard and there is no agreement about the
+way it should be understood.85 The last lines of the third passage are
+really puzzling. It is hard to understand clearly what is the difference
+
+between "having prudence and moderation" and "acting with pru
+dence and moderation," since one might think that you cannot act
+with prudence and moderation if you are not in possession of pru
+dence and moderation. According to the Stoic position, we choose
+what should be chosen, "to be happy" (eudaimone?n), a predicate.
+The direct object of our choice is the goal which is "proposed" or "set
+up before" us, a body. By contrast, the ultimate object of our choice is
+"to act with prudence and moderation" (a predicate), namely that for
+the sake of which everything is done but which itself is done in view of
+
+nothing. In other words, we actually choose what should be done,
+"acting prudently," an incorporeal predicate.
+If one concentrates on the distinction between -tos and -teos ad
+jectives, it is easy once more to realize that it deals with the ontologi
+cal difference between things or bodies and predicates or incorpore
+
+als. The above cited passages show goods and prudence (a virtue) as
+suitable examples of something which is worth being chosen (goods
+and prudence, as any other virtue, are bodies).86 Virtue is a body inso
+far as it is the commanding part of the soul disposed in a certain way
+
+and, as every good, it is worth being chosen, desired, and so on. A
+beneficial act, on the other hand, due to its being a predicate and adja
+cent to the goods, should be chosen. The notion of (bc|)?Xr||xa involves
+
+some difficulties. In fact, owing to its being adjacent to the goods
+(which by definition are bodies) and happening just to virtuous peo
+ple, it sometimes suggests that it is a sort of "correct act."87 But in
+other cases, like the one we are commenting on, a beneficial act is
+characterized as a predicate and, albeit adjacent to the goods, it con
+tinues to be incorporeal (at this point we can again clearly see the
+lekta, under the form of predicates, at work in the explanation of the
+
+difference between good and beneficial act). While the adjectives
+with the suffix -tos, then, are used to indicate the thing as something
+85 For a full discussion and philosophical interpretation see Engberg
+Pedersen, The Stoic Theory ofOikeiosis, 25-35.
+
+^Stobaeus, Excerpts 2.57, 20-2.
+87 Stobaeus, Excerpts 2.101, 7-9.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+750
+
+MARCELO D. BOERI
+
+desirable, something worth wishing for, and so forth (that is to say, to
+indicate the immediate or direct object of desire, wish, choice, and so
+
+on), the adjectives in -teos will make reference to the action itself.
+What should be chosen, desired, or wished for are the beneficial acts:
+acting prudently, moderately, courageously, and justly. This is so be
+
+cause what should be chosen, wished, desired is what produces ac
+tion in the practical context. Predicates, which are incorporeal, in
+some cases do not express an actual state of the world88 but in other
+cases certainly do express an actual state of the world (for instance,
+"to be a prudent person" said of the Stoic wise person). In general,
+however, it must be said that predicates are incorporeal because they
+are lekta. Once more it is clear enough, it seems to me, that even in
+the domain of the Stoic account of action we could constitute neither
+
+our personal world nor the objective world without taking into con
+sideration the bodies and the incorporeals working together. The ac
+tual world is not real to us unless we evaluate it with incorporeals
+and, more accurately, with the sayables. Incorporeals appear again
+playing a central role since they are crucial items for assessing the in
+formation given by the things affecting our perceptive capacities.
+Once we have evaluated this stuff, we have to put it in place and time,
+so that it becomes a "real" object.
+
+IV
+I am aware that giving definite conclusions on the corporeal/in
+corporeal issue in Stoic philosophy is, if not impossible, at least quite
+
+difficult. My conclusions and inferences are at best tentative. The
+conjectural character of our assertions on ancient Stoicism is some
+times justified due to the state of the extant remains. Indeed, our at
+
+tempt to reach an accurate account of Stoic doctrines is always
+thwarted by the scanty and frequently confusing evidence. In spite of
+this, it seems to me that it is possible to be sure about the fact that the
+issue concerning the existent/nonexistent relationship appears to be
+functioning all the time in Stoic philosophy. Thus it is necessary to
+88 In this last sentence I am following Pedersen's line of thought ( The
+
+Stoic Theory of Oikeiosis, 31). However, although provocative, his sugges
+tion that "phrone?n will be most appositely translated 'becoming (as op
+posed to being) phronimos1" seems to me an over-interpretation.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+THE STOICS ON BODIES AND INCORPOREALS
+read the ovTa-^ ovtcx distinction as a whole in the different parts of
+the philosophical discourse (physics, logic, ethics), and not simply as
+a point belonging just to physics. In this sense I would venture to say
+
+that, on the Stoic view, we should seriously consider existents and
+nonexistents in all the fields of research, and that these must be un
+derstood as working together. If my approach is right, it might be eas
+ier to understand why the Stoics were so proud of the coherence of
+
+their philosophical system. They are said to maintain that there
+should be a close connection among the parts of philosophy, since if
+one changed a single letter the whole system would fall down.89
+It may be objected that my general proposal regarding bodies and
+incorporeals is rather radical since if it is true, the Stoic ontology re
+
+sembles that of Plato. Thus, according to this objection, bodies ap
+pear to be not substantial entities?they do not exist by themselves
+but they need incorporeals to be what they are. I do not think that this
+
+consequence follows necessarily because the Stoic incorporeals are
+within this level of reality?they are immanent in the corporeal world.
+
+Thus there is no room to compare incorporeals to Platonic Forms.
+For Plato, Forms are causes of and ultimately responsible for sensible
+things. For the Stoics, I contend, there are no real things without in
+corporeals nor incorporeals without real things. This is not the case
+
+with sensibles and Plato's Forms.
+
+My primary purpose in this paper was not to reach secure conclu
+
+sions regarding the true sense of the bodies/incorporeals issue in
+early Stoicism, but rather to provoke discussion in a field of research
+that has been interpreted in a number of different ways since antiquity
+(which surely proves how misleading it was for generations of philos
+ophers and interpreters). I have tried to answer the basic question of
+whether Stoics held incorporeality (?o(b\iaxa-[ir\ ?vxa) and corporeal
+
+ity (o(b[iaxa-ovx?) to be incompatible ontological domains (as both
+some ancient and modern authors have maintained). My answer, as is
+obvious, is "no" because, as I hope to have shown, for the Stoics real
+ity is the result of the combination of bodies and incorporeals. There
+is no break between the two levels of reality. I think that the Stoics
+would agree that incorporeals without contents are empty, and bodies
+
+without incorporeals are blind. This is the way in which a human
+
+89 Cicero, On Ends 3.74. For further evidence see Diogenes Laertius 7.40
+and Sextus Empiricus, Adversus Mathematicos 7.17-19.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+751
+
+752
+
+MARCELO D. BOERI
+
+being is able to know and to categorize the world: by joining two
+realms which, in order to exist, must be linked to each other.90
+
+National Council for Scientific and Technological Research
+
+(Argentina)
+
+90 The initial work on this paper began while I held a research fellowship
+from Consejo Nacional de Investigaciones Cient?ficas y T?cnicas (Argentina)
+as a visiting researcher at the Department of Philosophy of Georgetown Uni
+versity (1994-95). The final version was done thanks to an appointment to
+the Center for Hellenic Studies in Washington, D. C, as a Junior Fellow in the
+academic year 1999-2000. I am grateful to the directors, Deborah Boedeker
+and Kurt Raaflaub, for their permanent support and encouragement. I am es
+pecially indebted to Richard Bett, whose detailed and acute remarks helped
+me to avoid a mistake. I would also like to thank Maximilian Forschner and
+Ricardo Salles for their criticism and concern. I read an abridged version of
+this paper at Departamento de Filosof?a, Universidade de Brasilia, Brazil, in
+December 1996. I benefited from comments of the audience in Brazil and es
+pecially from an observation by Jos? Gabriel Trindade Santos. Responsibil
+ity for errors remains my own.
+
+This content downloaded from
+132.174.253.197 on Thu, 29 Sep 2022 21:31:14 UTC
+All use subject to https://about.jstor.org/terms
+
+
