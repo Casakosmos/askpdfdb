@@ -42,11 +42,16 @@ class PDFEmbedder:
         return np.asarray(embedding)
 
     def get_openai_embedding(self, text):
-        response = self.openai_embedding_model.embed(text)
+        if isinstance(text, list):
+            response = self.openai_embedding_model.embed_many(text)
+        else:
+            response = self.openai_embedding_model.embed(text)
+        response['model'] = 'text-embedding-ada-002'
         return response['embeddings']
 
     def get_token_count(self, text):
         return self.openai_tokenizer_model.token_count(text)
+
 
 
 
@@ -55,22 +60,22 @@ class PDFProcessor:
         self.folder_name = folder_name
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
+        self.embedder = PDFEmbedder(cohere_key, openai_key)
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size = self.chunk_size,
             chunk_overlap = self.chunk_overlap,
-            length_function = get_token_count,
+            length_function = self.embedder.get_token_count,
         )
 
     def process_folder(self):
-        all_chunks = []
         for filename in os.listdir(self.folder_name):
             if filename.endswith(".pdf"):
                 filepath = os.path.join(self.folder_name, filename)
                 text = self._extract_text(filepath)
                 self._save_text_to_file(filename, text)
                 chunks = self._split_text(text)
-                all_chunks.extend(chunks)
-        return all_chunks
+                for chunk in chunks:
+                    self._append_chunk_to_file(filename, chunk)
 
     def _extract_text(self, filepath):
         doc = textract.process(filepath)
@@ -78,20 +83,18 @@ class PDFProcessor:
         return self._sanitize_text(text)
 
     def _sanitize_text(self, text):
-        # Remove special characters
         sanitized_text = re.sub(r'\W', ' ', text)
-        
-        # Convert to lowercase
         sanitized_text = sanitized_text.lower()
-        
-        # Remove extra spaces
         sanitized_text = re.sub(r'\s+', ' ', sanitized_text).strip()
-        
         return sanitized_text
 
     def _save_text_to_file(self, filename, text):
         with codecs.open('./text/' + filename[:-4] + '.txt', 'w', 'utf-8') as f:
             f.write(text)
+
+    def _append_chunk_to_file(self, filename, chunk):
+        with codecs.open('./text/' + filename[:-4] + '.txt', 'a', 'utf-8') as f:
+            f.write(chunk)
 
     def _split_text(self, text):
         return self.text_splitter.create_documents([text])
@@ -122,10 +125,16 @@ class DatabaseManager:
     def create_table(self):
         self.cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
 
-    def insert_vector(self, table_name, vector):
-        self.cursor.execute(f"INSERT INTO {table_name} (headline_embedding) VALUES (%s)", (vector.tolist(),))
+    def insert_vectors(self, table_name, vectors):
+        # Prepare the SQL query
+        sql = f"INSERT INTO {table_name} (headline_embedding) VALUES %s"
+        # Prepare the data
+        data = [(vector.tolist(),) for vector in vectors]
+        # Execute the SQL query
+        self.cursor.executemany(sql, data)
+        # Commit the changes
         self.conn.commit()
-
+        
     def search_vectors(self, vector):
         self.cursor.execute("SELECT * FROM vss_articles ORDER BY headline_embedding <-> ? LIMIT 10;", (vector.tolist(),))
         return self.cursor.fetchall()
@@ -174,7 +183,7 @@ class QueryProcessor:
         self.sanitized_query = self.sanitized_query.lower()
         self.sanitized_query = re.sub(r'\s+', ' ', self.sanitized_query).strip()
 
-    def generate_and_store_embeddings(self):
+    def generate_embeddings(self):
         # Generate the OpenAI embedding
         openai_embedding = self.embedder.get_openai_embedding(self.sanitized_query)
         # Perform vector similarity query on the 'questions' table using the OpenAI embedding
@@ -187,12 +196,16 @@ class QueryProcessor:
         context = self.synthesize_context(tokenized_answers)
         # Generate the Cohere embedding for the context
         cohere_embedding = self.embedder.get_cohere_embedding(context)
+        return openai_embedding, cohere_embedding
+
+    def store_embeddings(self, openai_embedding, cohere_embedding):
+        # Store the OpenAI embedding in the 'questions' table
+        self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
         # Perform vector similarity query on the 'texts' table using the Cohere embedding
         similar_texts = self.database.perform_vector_similarity_query('texts', cohere_embedding)
         # Delete the Cohere embedding from memory
         del self.temp_embeddings[self.sanitized_query]
         return similar_texts
-
 
 class UserInteraction:
     def __init__(self, query_processor):
@@ -214,11 +227,6 @@ class UserInteraction:
             self.chat_history.append((self.query_processor.sanitized_query, response))
             print(response)
 
-        
-        
-        
-
-        
 
         # Generate a response based on the most similar texts
         response = self.generate_response_based_on_similar_texts(similar_questions, similar_answers)
@@ -228,24 +236,19 @@ class UserInteraction:
         # Embed the response using the OpenAI API
         response_embedding = self.query_processor.openai_client.embed(response)
 
-
         # Build the prompt
         prompt = self.build_prompt(self.query_processor.sanitized_query, similar_texts)
-        
         
 
         # Make a text completion request via the OpenAI API
         event_stream = self.text_completion(prompt)
-        
         
 
         # Process the event stream and generate the final response
         response = self.process_event_stream(event_stream)
 
         
-
-
-         # Store the OpenAI embedding in the 'questions' table
+        # Store the OpenAI embedding in the 'questions' table
         self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
 
     def generate_context_and_prompt(self, query, similar_questions, similar_answers, key_concepts):
@@ -305,28 +308,27 @@ class UserInteraction:
 
 
 
-class FinalAnalysis
+class FinalAnalysis:
+    def prompt_gpt(self):
+        return "You are a scholar that possesses knowledge of philosophy at a PhD level and excel at explaining while at the same time being concise, clear, and demonstrating a masterful use of logic and philosophical terminology"
 
- 
-    def prompt_gpt(self)= "You are a scholar that posesses knowledge of philosophy at a phd level and excel at explaining while at the same time being concise, clear and demonstrating a masterful use of logic and philosophical terminology"
-    
-
-
-
-
-    def text_completion(self, prompt):
+    def text_completion(self, prompt, max_tokens):
         # Send the prompt to the OpenAI API to generate a text completion
         final_response = openai.Completion.create(
             engine="gpt-4",
-            prompt=final_prompt, prompt_gpt, similar_texts
+            prompt=final_prompt,
             max_tokens=max_tokens,
             temperature=0,
             stream=True,
         )
         return final_response
 
-        # Store the response and its embedding in the 'answers' table
-        self.query_processor.database.store_response('answers', final_response, response_embedding)
+# Embed the final response using the OpenAI API
+final_response_embedding = self.query_processor.embedder.get_openai_embedding(final_response)
+# Store the final response and its embedding in the 'answers' table
+self.query_processor.database.store_response('answers', final_response, final_response_embedding)
+
+
 
     def process_event_stream(self, event_stream):
         final_response = ""
@@ -340,14 +342,8 @@ class FinalAnalysis
         return final_response
 
 
-    # Convert the result into a query vector
-    query_vector = final_response['embeddings']
 
 
-
-    # Insert the response vector into the database
-    cursor.execute("INSERT INTO vss_articles (headline_embedding) VALUES (%s)", (response.tolist(),))
-    conn.commit()
 
     # Existing code...
     chat_history.append((query, response))
