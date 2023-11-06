@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS texts (
 CREATE TABLE IF NOT EXISTS questions (
     id bigserial PRIMARY KEY,
     question text,
-    embedding vector(1024)
+    embedding vector(1536)
 );
 
 -- Create the answers table
@@ -31,14 +31,14 @@ CREATE TABLE IF NOT EXISTS answers (
     question_id bigint REFERENCES questions(id),
     text_id bigint REFERENCES texts(id),
     answer text,
-    embedding vector(1024)
+    embedding vector(1536)
 );
 
 -- Create the responses table
 CREATE TABLE IF NOT EXISTS responses (
     id bigserial PRIMARY KEY,
     response text,
-    embedding vector(1024)
+    embedding vector(1536)
 );
 
 -- Create the HNSW indexes
