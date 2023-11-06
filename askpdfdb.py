@@ -192,7 +192,15 @@ class DatabaseManager:
 # This will prevent errors and ensure the integrity of the data.
 # See: agenda.txt#L11-L12
 
+
+
+    # OpenAI embeddings should be inserted into the 'questions' and 'answers' tables
     def insert_vectors(self, table_name, vectors):
+        """
+        This method is used to insert vectors into the specified table.
+        For OpenAI embeddings, use the 'questions' and 'answers' tables.
+        """
+
         sql = f"INSERT INTO {table_name} (headline_embedding) VALUES %s"
         data = [(vector.tolist(),) for vector in vectors]
         self.cursor.executemany(sql, data)
@@ -206,7 +214,14 @@ class DatabaseManager:
         self.conn.close()
 
 
+    # Cohere embeddings should be used with the 'texts' table
     def perform_vector_similarity_query(self, table_name, embedding, match_threshold=0.78, match_count=10, min_content_length=50):
+        """
+        This method is used to perform a vector similarity query on the specified table.
+        For Cohere embeddings, use the 'texts' table.
+        """
+        
+
         # Convert the embedding to a list
         embedding_list = embedding.tolist()
 
@@ -248,7 +263,12 @@ class QueryProcessor:
         self.sanitized_query = self.sanitized_query.lower()
         self.sanitized_query = re.sub(r'\s+', ' ', self.sanitized_query).strip()
 
+    # This method generates OpenAI embeddings
     def generate_embeddings(self):
+        """
+        This method is used to generate embeddings for the sanitized query.
+        It generates OpenAI embeddings.
+        """
         # Generate the OpenAI embedding
         openai_embedding = self.embedder.get_openai_embedding(self.sanitized_query)
         return openai_embedding
@@ -279,7 +299,12 @@ class QueryProcessor:
 
 
 
+    # This method stores OpenAI embeddings in the 'questions' table and Cohere embeddings in the 'texts' table
     def store_embeddings(self, openai_embedding, cohere_embedding):
+        """
+        This method is used to store embeddings in the database.
+        It stores OpenAI embeddings in the 'questions' table and Cohere embeddings in the 'texts' table.
+        """
         # Store the OpenAI embedding in the 'questions' table
         self.database.store_embedding('questions', self.sanitized_query, openai_embedding)
         # Perform vector similarity query on the 'texts' table using the Cohere embedding
