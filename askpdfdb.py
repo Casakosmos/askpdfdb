@@ -16,7 +16,7 @@ import shutil
 from tiktoken import Tokenizer
 from concurrent.futures import ThreadPoolExecutor
 import cohere
-
+import tiktoken
 
 MODEL = "embed-multilingual-v3.0"
 
@@ -35,7 +35,9 @@ os.environ["OPENAI_API_KEY"] = "<OPENAI_API_KEY>"
 
 
 
-
+# This method uses the OpenAI tokenizer model to count the number of tokens in a given text.
+# It is currently used by the RecursiveCharacterTextSplitter class in the PDFProcessor class.
+# If other parts of the code need to measure text length in terms of tokens, they should use this method.
 
 class PDFEmbedder:
     def __init__(self, cohere_key, openai_key):
@@ -55,12 +57,18 @@ class PDFEmbedder:
         response['model'] = 'text-embedding-ada-002'
         return response['embeddings']
 
-    def get_token_count(self, text):
-        return self.openai_tokenizer_model.token_count(text)
 
 
+    def num_tokens_from_string(self, string: str, encoding_name: str) -> int:
+        """Returns the number of tokens in a text string."""
+        encoding = tiktoken.get_encoding(encoding_name)
+        num_tokens = len(encoding.encode(string))
+        return num_tokens
 
 
+# The text_splitter object is used to split texts into chunks based on token count.
+# The get_token_count method from the PDFEmbedder class is used as the length_function parameter.
+# If the way text is split into chunks needs to be changed, modify the parameters of the RecursiveCharacterTextSplitter class.
 class PDFProcessor:
 
     def __init__(self, folder_name, chunk_size=1024, chunk_overlap=50):
@@ -71,8 +79,11 @@ class PDFProcessor:
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size = self.chunk_size,
             chunk_overlap = self.chunk_overlap,
-            length_function = self.embedder.get_token_count,
+            length_function = self.embedder.num_tokens_from_string,
         )
+
+# Here we're updating the length_function parameter in the RecursiveCharacterTextSplitter class to use the new num_tokens_from_string function. The length_function parameter is used by the RecursiveCharacterTextSplitter class to determine the length of a text in terms of tokens. By updating this parameter, we're ensuring that the new method for counting tokens is used when splitting texts into chunks. This ensures that the token count is consistent and accurate throughout the code, and that it aligns with the specific encoding used by the model we're interested in.
+
 
     def process_file(self, filename):
         filepath = os.path.join(self.folder_name, filename)
@@ -204,7 +215,9 @@ db = DatabaseManager("my_database", "username", "password", "localhost", "5432")
 db.create_table()
 # insert and search vectors...
 db.close()
-###
+#### This class processes user queries but does not currently use token count in any way.
+# Depending on the requirements, it might be beneficial to incorporate token count, for example, to limit the length of the user's query.
+# If token count is to be incorporated, consider using the get_token_count method from the PDFEmbedder class.
 
 
 class QueryProcessor:
@@ -222,10 +235,22 @@ class QueryProcessor:
     def generate_embeddings(self):
         # Generate the OpenAI embedding
         openai_embedding = self.embedder.get_openai_embedding(self.sanitized_query)
+        return openai_embedding
+
+        # Perform vector similarity query on the 'questions' table using the OpenAI embedding
+        
+    def perform_similarity_query(self, openai_embedding):
         # Perform vector similarity query on the 'questions' table using the OpenAI embedding
         similar_questions = self.database.perform_vector_similarity_query('questions', openai_embedding)
+        return similar_questions
+
+
+
+
         # Retrieve the corresponding answers for the similar questions
         similar_answers = [self.database.retrieve_answer(question) for question in similar_questions]
+
+
         # Tokenize the answers and extract key concepts
         tokenized_answers = [self.embedder.get_token_count(answer) for answer in similar_answers]
         # Synthesize the tokenized answers into a context of up to 8000 tokens
@@ -233,6 +258,10 @@ class QueryProcessor:
         # Generate the Cohere embedding for the context
         cohere_embedding = self.embedder.get_cohere_embedding(context)
         return openai_embedding, cohere_embedding
+
+
+
+
 
     def store_embeddings(self, openai_embedding, cohere_embedding):
         # Store the OpenAI embedding in the 'questions' table
@@ -243,6 +272,13 @@ class QueryProcessor:
         del self.temp_embeddings[self.sanitized_query]
         return similar_texts
 
+
+
+
+
+# This class processes user queries but does not currently use token count in any way.
+# Depending on the requirements, it might be beneficial to incorporate token count, for example, to limit the length of the user's query.
+# If token count is to be incorporated, consider using the get_token_count method from the PDFEmbedder class.
 class UserInteraction:
     def __init__(self, query_processor):
         self.query_processor = query_processor
