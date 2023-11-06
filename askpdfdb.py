@@ -13,13 +13,19 @@ import cohere
 import numpy as np
 import os
 import shutil
+from tiktoken import Tokenizer
+from concurrent.futures import ThreadPoolExecutor
+import cohere
+
+
+MODEL = "embed-multilingual-v3.0"
+
 
 
 cohere_key = "{YOUR_COHERE_API_KEY}"
 openai_key = "{YOUR_OPENAI_API_KEY}"
 
 co = cohere.Client(cohere_key)
-openai.api_key = openai_key
 
 
 
@@ -56,6 +62,7 @@ class PDFEmbedder:
 
 
 class PDFProcessor:
+
     def __init__(self, folder_name, chunk_size=1024, chunk_overlap=50):
         self.folder_name = folder_name
         self.chunk_size = chunk_size
@@ -66,6 +73,33 @@ class PDFProcessor:
             chunk_overlap = self.chunk_overlap,
             length_function = self.embedder.get_token_count,
         )
+
+    def process_file(self, filename):
+        filepath = os.path.join(self.folder_name, filename)
+        text = self._extract_text(filepath)
+        self._save_text_to_file(filename, text)
+        chunks = self._split_text(text)
+        embeddings = [self.embedder.get_cohere_embedding(chunk) for chunk in chunks]
+        return embeddings
+    
+
+
+    def _split_text(self, text, n):
+        tokenizer = Tokenizer()
+        tokens = tokenizer.encode(text)
+        i = 0
+        while i < len(tokens):
+            j = min(i + int(1.5 * n), len(tokens))
+            while j > i + int(0.5 * n):
+                chunk = tokenizer.decode(tokens[i:j])
+                if chunk.endswith(".") or chunk.endswith("\n"):
+                    break
+                j -= 1
+            if j == i + int(0.5 * n):
+                j = min(i + n, len(tokens))
+            yield tokens[i:j]
+            i = j
+        
 
     def process_folder(self):
         for filename in os.listdir(self.folder_name):
@@ -99,21 +133,27 @@ class PDFProcessor:
     def _split_text(self, text):
         return self.text_splitter.create_documents([text])
 
-    def prompt_for_download(self):
-        for filename in os.listdir(self.folder_name):
-            if filename.endswith(".pdf"):
-                download = input(f"Do you want to download {filename}? (yes/no): ")
-                if download.lower() != "yes":
-                    os.remove(os.path.join(self.folder_name, filename))
-                    print(f"{filename} has been deleted.")
-                else:
-                    destination = "/tmp"
-                    shutil.move(os.path.join(self.folder_name, filename), os.path.join(destination, filename))
-                    print(f"{filename} has been moved to {destination}.")
-                    print(f"To retrieve the file, use the following command (you may need to use sudo):")
-                    print(f"sudo mv /tmp/{filename} ~/")
 
 
+    # Assuming 'large_text' is your text extracted from PDFs
+    # Split the text into chunks
+    chunks = large_text.split('\n\n')
+
+    # Define a function to embed a chunk of text
+    def embed_text(chunk):
+        res = cohere.embed([chunk], input_type="search_document", model=MODEL).embeddings
+        return res
+
+    # Use a ThreadPoolExecutor to parallelize the embedding process
+    with ThreadPoolExecutor() as executor:
+        embeddings = list(executor.map(embed_text, chunks))
+
+    # Insert the embeddings into the database in batches
+    BATCH_SIZE = 1000  # Define your batch size
+    for i in range(0, len(embeddings), BATCH_SIZE):
+        batch = embeddings[i:i + BATCH_SIZE]
+        # Assuming 'client' is your vector database client
+        client.insert(batch)
 
 
 class DatabaseManager:
@@ -130,7 +170,7 @@ class DatabaseManager:
         data = [(vector.tolist(),) for vector in vectors]
         self.cursor.executemany(sql, data)
         self.conn.commit()
-        
+
     def search_vectors(self, vector):
         self.cursor.execute("SELECT * FROM vss_articles ORDER BY headline_embedding <-> ? LIMIT 10;", (vector.tolist(),))
         return self.cursor.fetchall()
@@ -338,6 +378,19 @@ self.query_processor.database.store_response('answers', final_response, final_re
         return final_response
 
 
+def prompt_for_download(self):
+    for filename in os.listdir(self.folder_name):
+        if filename.endswith(".pdf"):
+            download = input(f"Do you want to download {filename}? (yes/no): ")
+            if download.lower() != "yes":
+                os.remove(os.path.join(self.folder_name, filename))
+                print(f"{filename} has been deleted.")
+            else:
+                destination = "/tmp"
+                shutil.move(os.path.join(self.folder_name, filename), os.path.join(destination, filename))
+                print(f"{filename} has been moved to {destination}.")
+                print(f"To retrieve the file, use the following command (you may need to use sudo):")
+                print(f"sudo mv /tmp/{filename} ~/")
 
 
 
@@ -353,8 +406,12 @@ def main():
     create_match_documents_function(cursor)
     all_chunks = process_pdf_folder("./pdf", "./text")
     embedder = PDFEmbedder()
+    vectors = []
     for i, chunk in enumerate(all_chunks):
         embedding = embedder.create_embedding(chunk)
+        vectors.append(embedding)
+    db_manager = DatabaseManager("my_database", "username", "password", "localhost", "5432")
+    db_manager.insert_vectors("table_name", vectors)
         conn.execute('INSERT INTO vss_articles(headline_embedding) VALUES (?)', (embedding.tolist(),))
         interact_with_user()
     conn.commit()
