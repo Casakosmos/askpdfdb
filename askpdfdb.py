@@ -14,6 +14,9 @@ import numpy as np
 import os
 import shutil
 from tiktoken import Tokenizer
+
+# TODO: Consider multiprocessing or joblib for task parallelization (See: agenda.txt#L30-L31)
+
 from concurrent.futures import ThreadPoolExecutor
 import cohere
 import tiktoken
@@ -48,6 +51,11 @@ class PDFEmbedder:
     def get_cohere_embedding(self, text):
         embedding = self.cohere_client.embed([text], input_type="search_document", model="embed-multilingual-v3.0").embeddings
         return np.asarray(embedding)
+
+# TODO: Input Validation Issue 1 (Lines 5-6 in agenda.txt)
+# We need to add validation to check for empty lists before processing them.
+# This will prevent errors and unexpected behavior.
+# See: agenda.txt#L5-L6
 
     def get_openai_embedding(self, text):
         if isinstance(text, list):
@@ -156,6 +164,9 @@ class PDFProcessor:
         return res
 
     # Use a ThreadPoolExecutor to parallelize the embedding process
+
+    # TODO: Specify optimal thread count for ThreadPoolExecutor (See: agenda.txt#L22-L23)
+
     with ThreadPoolExecutor() as executor:
         embeddings = list(executor.map(embed_text, chunks))
 
@@ -174,7 +185,12 @@ class DatabaseManager:
         self.cursor.execute('CREATE EXTENSION IF NOT EXISTS pgvector')
 
     def create_table(self):
-        self.cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1536))')
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS vss_articles (id serial primary key, headline_embedding vector(1024))')
+
+# TODO: Input Validation Issue 3 (Lines 11-12 in agenda.txt)
+# We need to validate the format of the vectors before inserting them into the database.
+# This will prevent errors and ensure the integrity of the data.
+# See: agenda.txt#L11-L12
 
     def insert_vectors(self, table_name, vectors):
         sql = f"INSERT INTO {table_name} (headline_embedding) VALUES %s"
